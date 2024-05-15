@@ -1,3 +1,33 @@
-1. Tags semanticas são usadas em codigos html para determitar
+1. Tags semanticas são usadas em codigos html para determitar um conteúdo especifico a ser interpretado pelo navegador, são utilizadas para melhorar a indexação de buscadores e tambem para ser utilizado com as ferramentas de acessibilidade, alguns exemplos são: <h1> <p> <section> <body> <head> <article>
 
-2.
+2. Elementos inline são elementos que ocupam somente a largura de seu conteúdo podem ser exibidos em nivel de bloco ou de outros elementos inline. por padrão elementos inline não começam em um nova linha, se dispondo lado a lado alguns exemplos: 
+
+    b, big, i, small, tt
+    abbr, acronym, cite, code, dfn, em, kbd, strong, samp, var
+    a, bdo, br, img, map, object, q, script, span, sub, sup
+    button, input, label, select, textarea
+
+3. Os elementos em nivel de bloco ocupam todo o espaço de seu elemento pai criando assim um "bloco" navegadores normalmente mostram um elemento em nível de bloco com uma nova linha antes e depois do elemento.
+
+4. A utilização do atributo 'alt' é a utilizado para descrever a imagem a ser exibida, é utilizada quando ocorre algum erro na exibição da imagem ou quando um leitor de tela está sendo utilizado, sendo importante tanto para  o SEO como para as ferramentas de acessibilidade.
+
+5. A herança em CSS significa que se nenhum valor for especificado para o elemento, ele tera o valor do elemento pai. um exemplo:
+
+    css
+
+    p {
+    color: green;
+    }
+
+    <p>Este paragrafo tem <em>texto enfatizado</em> dentro dele.</p>
+
+6. BEM é a sigla para Block Element Modifier que consiste em um padrão de nomeação de classes para os elementos da marcação HTML baseado ba sua função estrutual e não de apresentação.
+
+7. Medidas absolutas são medidas fixas que não dependem de um valor de referencia, enquanto medidas relativas são calculadas com base em outra unidade de medida já´definida.
+
+8. Vw (viewport width) e Vh (viewport height) são medidas relativas a area visivel da pagina no navegador. vw" refere-se à porcentagem da largura visível, enquanto "vh" refere-se à porcentagem da altura.
+
+
+
+
+
