@@ -4,8 +4,7 @@
 
     while ($saida == false) {
         echo "Digite um número (ou -1 para terminar: ";
-
-        $num = 4;
+        $num = trim(fgets(STDIN));
         $maiorNum = 0;
 
             if ($num < $maiorNum) {
