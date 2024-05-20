@@ -1,5 +1,6 @@
 <?php
-    $numero = 6;
+     echo "Digite um número para saber é primo: ";
+     $numero = trim(fgets(STDIN));
 
     if ($numero > 0 ) {
 
@@ -18,7 +19,7 @@
         } else {
             echo "O número " . $numero . " não é primo.";  
         }
-
-    } 
-
+        
+    } else {
+        echo "O número " . $numero . " não é primo.";  }
 ?>
