@@ -19,6 +19,5 @@ if ($numA < $numB) {
     echo "O número $numA não é maior que $numB, por favor digite outros valores.";
 }
 
-echo "$soma";
-
+echo "A soma dos números impares entre $numA e $numB é $soma";
 ?>

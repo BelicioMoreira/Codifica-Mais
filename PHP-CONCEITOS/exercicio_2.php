@@ -8,7 +8,7 @@
     echo "Digite a 2° nota: ";
     $nota3 = trim(fgets(STDIN));
 
-    $media = ($nota + $nota2 + $nota3) / 3;
+    $media = ($nota1 + $nota2 + $nota3) / 3;
     
     echo "A média das notas foram $media";
 ?>
