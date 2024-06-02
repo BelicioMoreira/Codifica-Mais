@@ -7,9 +7,10 @@
 
     echo "Digite um número para verificar se ele esta presente neste array: ";
     $num = (int)trim(fgets(STDIN));
+    $posicao = array_search($num, $array,);
 
-    if (array_search($num, $array, true)){
-        echo "O número $num está presente no array.";
+    if ($posicao !== false){
+        echo "O número $num está presente no array, na posição " . ($posicao + 1);
     } else {
         echo "O número $num não está presente no array."; 
     }

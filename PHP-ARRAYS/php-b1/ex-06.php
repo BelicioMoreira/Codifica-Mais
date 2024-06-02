@@ -6,7 +6,7 @@
 
     for ($i = 0; $i < 9; $i++){
         echo "Escreva o " . $i + 2 . "º número: ";
-        $num = trim(fgets(STDIN));
+        $num = (int)trim(fgets(STDIN));
         if ($num < $menorNum){
             $menorNum = $num;
         }
