@@ -9,7 +9,7 @@
     }
 
     echo "Digite um número para saber a sua tabela de multiplicação: ";
-    $num = trim(fgets(STDIN));
+    $num = (int)trim(fgets(STDIN));
     echo calcularTabela($num);
 
 ?>
