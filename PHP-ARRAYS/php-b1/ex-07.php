@@ -2,9 +2,9 @@
 
     function calcularTabela($num)
     {
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i = 1; $i <= 10; $i++) {
             $resultado = $i * $num;
-            echo "$i" . " x " . "$num = " . "$resultado\n";
+            echo "$num" . " x " . "$i = " . "$resultado\n";
         }
     }
 
