@@ -4,17 +4,17 @@
     {
         $imc = $peso / ($altura * $altura);
         if ($imc < 18.5){
-            echo "A classificaçao do seu imc é: Magreza";
+            echo "Seu IMC é: $imc (Kg/m²), ea classificaçao do seu imc é: Magreza";
         } elseif ($imc > 18.5 && $imc < 24.9){
-            echo "A classificaçao do seu imc é: Normal";
+            echo "Seu IMC é: $imc (Kg/m²), ea classificaçao do seu imc é: Normal";
         } elseif ($imc > 25 && $imc < 29.9){
-            echo "A classificaçao do seu imc é: Sobrepeso";
+            echo "Seu IMC é: $imc (Kg/m²), ea classificaçao do seu imc é: Sobrepeso";
         } elseif ($imc > 30 && $imc < 34.9){
-            echo "A classificaçao do seu imc é: Obesidade grau I";
+            echo "Seu IMC é: $imc (Kg/m²), ea classificaçao do seu imc é: Obesidade grau I";
         } elseif ($imc > 35 && $imc < 39.9){
-            echo "A classificaçao do seu imc é: Obesidade grau II";
+            echo "Seu IMC é: $imc (Kg/m²), ea classificaçao do seu imc é: Obesidade grau II";
         } elseif ($imc > 40){
-            echo "A classificaçao do seu imc é: Obesidade grau III";
+            echo "Seu IMC é: $imc (Kg/m²), ea classificaçao do seu imc é: Obesidade grau III";
         }
     }
 
