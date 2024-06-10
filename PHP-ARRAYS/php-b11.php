@@ -3,7 +3,6 @@
     $estoque = [];
 
     // Implemente aqui o código
-
     function adicionarProduto(&$estoque, $codigo, $nome, $tamanho, $cor, $quantidade)
     {
         $estoque[] = [
@@ -17,11 +16,12 @@
 
     function venderProduto(&$estoque, $quantidade)
     {
-        if (in_array($estoque['codigo'] == 7, $estoque)){
-            $quantidade--;
-            echo $quantidade;
-            echo "teste";
+        foreach ($estoque as $produto) {
+            if ($produto['codigo'] == 101) {
+                echo "Vendeu";
+            }
         }
+        //var_dump($estoque);
     }
 
     function listarEstoque($estoque)
@@ -46,7 +46,7 @@
         echo "3. Verificar Estoque 3\n";
         echo "4. Listar o Estoque 4\n";
         echo "5. Sair\n";
-        $opcao = readline("Digite a sua escolha: \n");
+        $opcao = readline("Digite a sua escolha: ");
         return $opcao;
     }
 
