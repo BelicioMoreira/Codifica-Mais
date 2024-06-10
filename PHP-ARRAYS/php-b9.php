@@ -9,9 +9,9 @@
 
     function calcularDescontoProgressivo($valorCompra)
     {
-        if ($valorCompra <= 100){
+        if ($valorCompra < 100){
             $percentualDesconto = 0;
-        } elseif ($valorCompra > 100 && $valorCompra <= 500){
+        } elseif ($valorCompra >= 100 && $valorCompra <= 500){
             $percentualDesconto = 10;
         } elseif ($valorCompra > 500){
             $percentualDesconto = 20;
