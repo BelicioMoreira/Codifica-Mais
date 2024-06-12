@@ -17,38 +17,56 @@
     function venderProduto(&$estoque, $codigo, $quantidade)
     {
         $codigo = readline("Digite o código do produto: ");
-        foreach ($estoque as $key => $produto) {
+        foreach ($estoque as $key => &$produto) {
+            
             if ($produto['codigo'] == $codigo) {
                 $quantidade = readline("Digite a quantidade: ");
+                if ($quantidade > $produto['quantidade']) {
+                    echo "-------------------------------------------------------------------------\n";
+                    echo "Existem apenas {$produto['quantidade']} deste produto\n";
+                    echo "-------------------------------------------------------------------------";
+                    break;
+                }
                 $produto['quantidade'] -= $quantidade;
+                    echo "-------------------------------------------------------------------------\n";
+                    echo "Foi vendido $quantidade unidades do produto {$produto['nome']}.\n";
+                    echo "-------------------------------------------------------------------------";
+            }    
+        }
+
+        if ($produto['quantidade'] == 0) { 
+            unset($estoque[$key]);
+            echo "-------------------------------------------------------------------------\n";
+            echo "O produto  {$produto['nome']} foi removido, pois acabou o estoque. ". "\n";
+            echo "-------------------------------------------------------------------------";                    
+        }
+
+        if ($produto['codigo'] != $codigo) {
+            echo "-------------------------------------------------------------------------\n";
+            echo "Produto não encontrado.\n";
+            echo "-------------------------------------------------------------------------";
+        }            
+    }    
+
+    function verificarEstoque(&$estoque, $codigo) 
+    {
+        $codigo = readline("Digite o código do produto: ");
+        foreach ($estoque as $produto) {
+            if ($produto['codigo'] == $codigo) {
                 echo "-------------------------------------------------------------------------\n";
-                echo "Foi vendido $quantidade unidades do produto {$produto['nome']}.\n";
+                echo "Produto encontrado.\n";
                 echo "-------------------------------------------------------------------------";
             } else {
                 echo "-------------------------------------------------------------------------\n";
                 echo "Produto não encontrado.\n";
                 echo "-------------------------------------------------------------------------";
             }
-
-            if ($quantidade > $produto['quantidade']) {
-                echo "-------------------------------------------------------------------------\n";
-                echo "Existem apenas {$produto['quantidade']} deste produto\n";
-                echo "-------------------------------------------------------------------------";
-            }
-
-            if ($produto['quantidade'] == 0) { 
-                unset($estoque[$key]);
-                echo "-------------------------------------------------------------------------\n";
-                echo "O produto  {$produto['nome']} foi removido, pois acabou o estoque. ". "\n";
-                echo "-------------------------------------------------------------------------";
-            }
         }
-        //var_dump($estoque);
     }
 
     function listarEstoque($estoque)
     {
-        if(empty($estoque)){
+        if(empty($estoque)) {
             echo "Estoque vazio!\n";
             return;
         }
@@ -88,18 +106,19 @@
                 break;
             case 2:
                 echo "Vender um produto\n";
-                echo venderProduto($estoque, $codigo, $quantidade);
                 // Implemente aqui o código para a opção 2
+                echo venderProduto($estoque, $codigo, $quantidade);
                 break;
             case 3:
                 echo "Verificar Estoque\n";
                 // Implemente aqui o código para a opção 3
+                echo verificarEstoque($estoque, $codigo);
                 break;
             case 4:
                 echo "Listar o Estoque\n";
+                // Implemente aqui o código para a opção 4
                 echo "-------------------------------------------------------------------------\n";
                 echo listarEstoque($estoque);
-                // Implemente aqui o código para a opção 4
                 break;
             case 5:
                 echo "Saindo...\n";
