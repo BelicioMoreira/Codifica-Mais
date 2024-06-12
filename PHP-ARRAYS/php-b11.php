@@ -14,11 +14,33 @@
         ];
     }
 
-    function venderProduto(&$estoque, $quantidade)
+    function venderProduto(&$estoque, $codigo, $quantidade)
     {
-        foreach ($estoque as $produto) {
-            if ($produto['codigo'] == 101) {
-                echo "Vendeu";
+        $codigo = readline("Digite o código do produto: ");
+        foreach ($estoque as $key => $produto) {
+            if ($produto['codigo'] == $codigo) {
+                $quantidade = readline("Digite a quantidade: ");
+                $produto['quantidade'] -= $quantidade;
+                echo "-------------------------------------------------------------------------\n";
+                echo "Foi vendido $quantidade unidades do produto {$produto['nome']}.\n";
+                echo "-------------------------------------------------------------------------";
+            } else {
+                echo "-------------------------------------------------------------------------\n";
+                echo "Produto não encontrado.\n";
+                echo "-------------------------------------------------------------------------";
+            }
+
+            if ($quantidade > $produto['quantidade']) {
+                echo "-------------------------------------------------------------------------\n";
+                echo "Existem apenas {$produto['quantidade']} deste produto\n";
+                echo "-------------------------------------------------------------------------";
+            }
+
+            if ($produto['quantidade'] == 0) { 
+                unset($estoque[$key]);
+                echo "-------------------------------------------------------------------------\n";
+                echo "O produto  {$produto['nome']} foi removido, pois acabou o estoque. ". "\n";
+                echo "-------------------------------------------------------------------------";
             }
         }
         //var_dump($estoque);
@@ -32,7 +54,7 @@
         }
         foreach ($estoque as $produto) {
             echo "Código: {$produto['codigo']} Nome: {$produto['nome']} Tamanho: {$produto['tamanho']} Cor: {$produto['cor']} Quantidade: {$produto['quantidade']} \n";
-            echo "-------------------------------------------------------------------------";
+            echo "-------------------------------------------------------------------------\n";
         }
     }
 
@@ -66,7 +88,7 @@
                 break;
             case 2:
                 echo "Vender um produto\n";
-                echo venderProduto($estoque,$quantidade);
+                echo venderProduto($estoque, $codigo, $quantidade);
                 // Implemente aqui o código para a opção 2
                 break;
             case 3:
