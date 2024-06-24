@@ -2,3 +2,73 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: rgb(36, 40, 49);
+}
+
+.box {
+    font-family: Rubik, sans-serif;
+    border-radius: 0.5rem;
+    background-color: #f2f3f4;
+    color: rgb(56, 62, 77);
+}
+
+.titulo {
+    background-color: #f2f3f4;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.img {
+    max-width: 86px;
+    border: 1px solid;
+    border-radius: 0.5rem;
+}
+
+.titulo1 {
+    color: rgb(36, 106, 255);
+    font-weight: 500;
+}
+
+.titulo2 {
+    color:rgb(121, 127, 143);
+    font-weight: 500;
+}
+
+.titulo3 {
+    color: rgb(46, 46, 46);
+    font-weight: 500;
+}
+
+.tempo {
+    background-color: #f2f3f4;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.barra1 {
+    background-color: rgb(36, 106, 255);
+    flex: 1;
+    height: 10px;
+}
+
+.barra2 {
+    background-color: #e2e2e2;
+    flex: 2;
+    height: 10px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.7rem;
+    margin-top: auto;
+    background-color:rgb(228, 232, 236);
+}
