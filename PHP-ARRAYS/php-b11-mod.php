@@ -1,15 +1,5 @@
 <?php 
 
-    /* $array = ['GRA-005', 'GRA-006', 'GRA-007', 'GRA-006']
-    $skuProcurado = 'GRA-006';
-    $key = array_search($skuProcurado, $array);
-    echo "$key\n"; // aqui ele deverá retornar 1
-
-    $skuProcurado = 'GRA-006';
-    $key = array_search($skuProcurado, array_column($estoque, 'sku'));
-    echo "$key\n";
-    unset($estoque[$key]); */
-
     $estoque = [
         [
         'sku' => 'GRA-001',
@@ -84,9 +74,20 @@
         ];
 
     // Implemente aqui o código
-    function adicionarProduto()
+    function adicionarProduto(&$estoque, $novoEstoque, $sku, $nome, $unidade_medida, $preco, $quantidade)
     {
-
+        $novoEstoque = [
+            [
+                'sku' => $sku,
+                'nome' => $nome,
+                'unidade_medida' => $unidade_medida,
+                'quantidade' => $quantidade,
+                'preco' => $preco                
+            ]
+            ];
+            
+        $estoque = array_merge($estoque, $novoEstoque);
+        var_dump($estoque);
     }
 
     function venderProduto()
@@ -106,11 +107,12 @@
 
     function deletarProduto($estoque)
     {
-        $skuProcurado = 'GRA-006';
+        $skuProcurado = readline("Digite o SKU do produto: ");
         $key = array_search($skuProcurado, array_column($estoque, 'sku'));
-        // echo "$key\n";
+
         var_dump($key);
         unset($estoque[$key]);
+        var_dump($estoque);
     }
 
     // Função para exibir o menu e obter a escolha do usuário
@@ -137,10 +139,10 @@
                 echo "Adicionar um produto\n";
                 $sku = readline("Digite o Código do produto: ");
                 $nome = readline("Digite o Nome do produto: ");
-                $unidade_medida = readline("Digite o unidade_medida: ");
-                $preco = readline("Digite a preco: ");
-                $quantidade = readline("Digite a Quantidade: ");
-                adicionarProduto($estoque, $sku, $nome, $unidade_medida, $preco, $quantidade);
+                $unidade_medida = readline("Digite a unidade de medida: ");
+                $quantidade = readline("Digite a quantidade: ");
+                $preco = readline("Digite a preço: ");
+                adicionarProduto($estoque, $novoEstoque, $sku, $nome, $unidade_medida, $preco, $quantidade);
                 break;
             case 2:
                 echo "Vender um produto\n";
@@ -160,6 +162,7 @@
             case 5:
                 echo "Deletar produto\n";
                 deletarProduto($estoque);
+                break;
             case 6:
                 echo "Saindo...\n";
                 exit; // Sai do loop e encerra o script
