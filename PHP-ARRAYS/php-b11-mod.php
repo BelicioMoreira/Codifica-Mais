@@ -73,24 +73,36 @@
         ]
         ];
 
+        $novoEstoque = [];
+
     // Implemente aqui o código
     function adicionarProduto(&$estoque, $novoEstoque, $sku, $nome, $unidade_medida, $preco, $quantidade)
     {
-        $novoEstoque = [
-            [
-                'sku' => $sku,
-                'nome' => $nome,
-                'unidade_medida' => $unidade_medida,
-                'quantidade' => $quantidade,
-                'preco' => $preco                
-            ]
-            ];
+
+        $key = array_search($sku, array_column($estoque, 'sku'));
+
+        if ($key == true){
+            echo "produto nao pode ser adicionado";
+            var_dump($key);
             
+        } else {
+
+            $novoEstoque = [
+                [
+                    'sku' => $sku,
+                    'nome' => $nome,
+                    'unidade_medida' => $unidade_medida,
+                    'quantidade' => $quantidade,
+                    'preco' => $preco                
+                ]
+                ];
+        }; 
+
         $estoque = array_merge($estoque, $novoEstoque);
-        var_dump($estoque);
+        
     }
 
-    function venderProduto()
+    function venderProduto($estoque)
     {
 
     }    
@@ -100,19 +112,22 @@
 
     }
 
-    function listarEstoque()
+    function listarEstoque($estoque)
     {
-
+        var_dump($estoque);
     }
 
-    function deletarProduto($estoque)
+    function deletarProduto(&$estoque)
     {
         $skuProcurado = readline("Digite o SKU do produto: ");
         $key = array_search($skuProcurado, array_column($estoque, 'sku'));
 
+        if (array_column($estoque, 'quantidade') > 0){
+            echo "nao pode deletar"; 
+        }
+
         var_dump($key);
         unset($estoque[$key]);
-        var_dump($estoque);
     }
 
     // Função para exibir o menu e obter a escolha do usuário
