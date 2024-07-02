@@ -14,7 +14,7 @@ CREATE TABLE produtos (
     quantide_estoque INT NOT NULL,
     fabricante VARCHAR(255) NOT NULL,
     fornecedor VARCHAR(255) NOT NULL,
-    deleted_at DATETIME NOT NULL,
-    created_at DATETIME NOT NULL,
-    updated_at DATETIME NOT NULL
+    deleted_at TIMESTAMP NULL,
+    created_at TIMESTAMP NOT NULL,
+    updated_at TIMESTAMP NOT NULL
 );
