@@ -1,6 +1,6 @@
 USE gestao_produtos;
 
-CREATE TABLE categoria (
+CREATE TABLE categorias (
     id BIGINT AUTO_INCREMENT, PRIMARY KEY (id),
     nome_categoria VARCHAR(255) NOT NULL, 
     deleted_at TIMESTAMP NULL,

@@ -8,7 +8,7 @@ DROP fornecedor;
 
 ALTER TABLE produtos
 ADD COLUMN categoria BIGINT,
-ADD CONSTRAINT fk_categoria FOREIGN KEY (categoria) REFERENCES categoria(id);
+ADD CONSTRAINT fk_categoria FOREIGN KEY (categoria) REFERENCES categorias(id);
 
 ALTER TABLE produtos
 ADD COLUMN unidade_medida BIGINT,
