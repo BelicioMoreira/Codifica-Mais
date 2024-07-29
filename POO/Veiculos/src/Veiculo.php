@@ -1,7 +1,6 @@
 <?php
 
-namespace POO\Veiculo\src;
-
+namespace Projeto\Veiculos;
 abstract class Veiculo implements VeiculoInterface
 {
     protected $marca;
@@ -14,7 +13,13 @@ abstract class Veiculo implements VeiculoInterface
         $this->modelo = $modelo;
         $this->ano = $ano;
     }
-
-    abstract public function acelerar();
-    abstract public function frear();
+    public function acelerar(): string
+    {
+        return "Veiculo esta acelerando";
+    }
+    public function frear(): string
+    {
+        return "Veiculo esta freando";
+    }
+    abstract public function exibirDetalhes(): string;
 }

@@ -1,9 +1,8 @@
-<?php 
-
-namespace POO\Veiculo\src;
-
+<?php
+namespace Projeto\Veiculos;
 interface VeiculoInterface
 {
-    public function acelerar();    
-    public function frear();
+    public function acelerar(): string;    
+    public function frear(): string;
+    public function exibirDetalhes(): string;
 }
