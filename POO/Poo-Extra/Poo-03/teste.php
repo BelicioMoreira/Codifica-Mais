@@ -3,8 +3,8 @@
 require_once './FuncionarioHorista.php';
 require_once './FuncionarioMensalista.php';
 
-$funcionarioHorista = new FuncionarioHorista('String', 123, 123);
-$funcionarioMensalista = new FuncionarioMensalista();
+$funcionarioHorista = new FuncionarioHorista('Funcionario Horista', 0, 220 ,10);
+$funcionarioMensalista = new FuncionarioMensalista('Funcionario Mensalista', 2000);
 
-var_dump($funcionarioHorista->calcularSalario());
-//var_dump($funcionarioMensalista);
+echo $funcionarioHorista->exibirInformacoes() . "\n";
+echo $funcionarioMensalista->exibirInformacoes() . "\n";
