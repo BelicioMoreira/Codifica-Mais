@@ -1,5 +1,7 @@
 <?php
 
+require_once './ProdutoInterface.php';
+
 class Produto implements ProdutoInterface
 {
     private $sku, $nome, $quantidade, $unidadeMedida, $preco;
