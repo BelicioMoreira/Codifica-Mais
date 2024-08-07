@@ -48,44 +48,49 @@ class Estoque
 
             if ($produto->getCodigo() == $codigoProcura) {
             
-            $quantidadeVenda = readline("Digite a quantidade para venda: ");
+                $quantidadeVenda = readline("Digite a quantidade para venda: ");
 
-            if ($quantidadeVenda > $produto->getQuantidade()) {
-                echo "-------------------------------------------------------------------------\n";
-                echo "Existem apenas {$produto->getQuantidade()} deste produto\n";
-                echo "-------------------------------------------------------------------------\n";
-            } else {
-                $produto->vendaProduto($quantidadeVenda);
-                echo "-------------------------------------------------------------------------\n";
-                echo "Foi vendido $quantidadeVenda unidades do produto {$produto->getNome()}.\n";
-                echo "-------------------------------------------------------------------------\n";
-            }
+                if ($quantidadeVenda > $produto->getQuantidade()) {
+                    echo "-------------------------------------------------------------------------\n";
+                    echo "Existem apenas {$produto->getQuantidade()} deste produto\n";
+                    echo "-------------------------------------------------------------------------\n";
+                } else {
+                    $produto->vendaProduto($quantidadeVenda);
+                    echo "-------------------------------------------------------------------------\n";
+                    echo "Foi vendido $quantidadeVenda unidades do produto {$produto->getNome()}.\n";
+                    echo "-------------------------------------------------------------------------\n";
+                }
 
-            if ($produto->getQuantidade() == 0) {
-                unset($this->estoque);
-                echo "-------------------------------------------------------------------------\n";
-                echo "O produto  {$produto->getNome()} foi removido, pois acabou o estoque. ". "\n";
-                echo "-------------------------------------------------------------------------\n";
+                if ($produto->getQuantidade() == 0) {
+                    unset($this->estoque);
+                    echo "-------------------------------------------------------------------------\n";
+                    echo "O produto  {$produto->getNome()} foi removido, pois acabou o estoque. ". "\n";
+                    echo "-------------------------------------------------------------------------\n";
+                }
             }
         }
-        }
+
+        echo "-------------------------------------------------------------------------\n";                
+        echo "Produto não encontrado.\n";                
+        echo "-------------------------------------------------------------------------\n";   
     }
 
     public function verificarEstoque(): void
     {
         $codigoProcura = readline("Digite o código do produto: ");
-        foreach ($this->estoque as $produto) {
 
+        foreach ($this->estoque as $produto) {
             if ($produto->getCodigo() == $codigoProcura) {
                 echo "-------------------------------------------------------------------------\n";
                 echo "O produto {$produto->getNome()} está disponivel com {$produto->getQuantidade()} unidades\n";
                 echo "-------------------------------------------------------------------------\n";
-            } elseif ($produto->getCodigo() != $codigoProcura) {
-                echo "-------------------------------------------------------------------------\n";                
-                echo "Produto não encontrado.\n";                
-                echo "-------------------------------------------------------------------------\n";   
+                return;
             }
         }
+
+        echo "-------------------------------------------------------------------------\n";                
+        echo "Produto não encontrado.\n";                
+        echo "-------------------------------------------------------------------------\n";   
     }
 
     public function listarEstoque(): void
