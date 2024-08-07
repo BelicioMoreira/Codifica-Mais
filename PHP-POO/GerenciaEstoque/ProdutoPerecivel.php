@@ -1,8 +1,5 @@
 <?php
 
-require_once './Produto.php';
-require_once './ProdutoInterface.php';
-
 class ProdutoPerecivel extends Produto implements ProdutoInterface
 {
     private $dataValidade;
