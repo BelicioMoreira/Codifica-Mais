@@ -5,31 +5,93 @@
 
 body {
     background-color: rgb(153, 128, 26);
+    display: flex;
+    justify-content: center;
 }
 
 main {
     background-color: rgb(255, 1, 1);
     border-radius: 1rem;
-    display: flex;
     flex-direction: column;
     border: 1rem;
     border-color: beige;
     margin: 3rem;
+    min-width: 45rem;
 }
 
-.secao__busca {
-    background-color: rgb(77, 97, 177);
+.secao__cabecalho {
+    background-color: rgb(210, 215, 235);
     border-radius: 1rem;
-    margin: 3rem;
+    margin-inline: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     padding: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cabecalho__botao {
+    background-color: rgb(24, 236, 243);
+}
+
+.cabecalho__busca {
+    background-color: rgb(255, 239, 167);
 }
 
 .secao__itens {
     background-color: rgb(139, 202, 162);
     border-radius: 1rem;
-    margin-inline: 3rem;
-    margin-bottom: 3rem;
+    margin-inline: 2rem;
+    margin-bottom: 1rem;
     padding: 0.5rem;
+}
+
+.secao__itens__item {
+    background-color: rgb(217, 44, 240);
+}
+
+.secao__itens__dados {
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+}
+
+.id__categoria__sku {
+    background-color: rgb(162, 173, 164);
+    display: flex;
+    flex-direction: row;
+}
+
+.id {
+    background-color: rgb(55, 185, 38);
+}
+
+.categoria {
+    background-color: rgb(213, 218, 201);
+}
+
+.sku {
+    background-color: rgb(243, 154, 195);
+    flex-grow: 4;
+    text-align: end;
+}
+
+.nome__quantidade {
+    background-color: rgb(62, 63, 9);
+    margin: 0.33rem;
+    padding: 0.33rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+}
+
+.nome {
+    background-color: rgb(248, 7, 79);
+}
+
+.quantidade {
+    background-color: rgb(134, 204, 125);
 }
 
 .secao__itens__botoes {
@@ -37,7 +99,15 @@ main {
 }
 
 .box__botoes {
+    background-color: aliceblue;
     display: flex;
-    flex-direction: row;
+    justify-content: space-between;
 }
 
+.botao__editar {
+    background-color: rgb(147, 235, 135);
+}
+
+.botao__deletar {
+    background-color: rgb(201, 243, 13);
+}

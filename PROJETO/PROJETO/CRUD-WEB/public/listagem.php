@@ -14,96 +14,88 @@ session_start();
 <body>    
     <main>
 
-        <div class="secao__busca">
-            <a href="#">Novo Item</a>
-            <p>Bucar item</p>
-            <form action="users.php" method="GET">
-            <input id="search" name="search" type="text" placeholder="Type here">
-            <input id="submit" type="submit" value="Search">
-            </form>
-        </div>
-
-        <div class="secao__itens">
-            <div class="secao__itens__iten">
-
-                <div class="secao__itens__dados">
-                    <ul class="id__nome">
-                        <li>#000001</li>
-                        <li>Camisa codifica+</li>
-                    </ul>
-                    <span class="categoria">Vestuário</span>
-                    <ul class="SKU__quantidade">
-                        <li>SKU: 123456</li>
-                        <li>Quantidade: 100</li>
-                    </ul>
-                </div>
-
-                <div class="secao__itens__botoes">
-                    <ul class="box__botoes">
-                        <li>
-                            <a href="#">Editar</a>
-                        </li>
-                        <li>
-                            <a href="#">Deletar</a>
-                        </li>
-                    </ul>
-                </div>                
+        <div class="secao__cabecalho">
+            <button class="cabecalho__botao">Novo Item</button>
+            <div class="cabecalho__busca">
+                <div>Buscar item</div>
+                <form action="users.php" method="GET">
+                    <input id="search" name="search" type="text" divlaceholder="Buscar item">
+                </form>
             </div>
         </div>
 
         <div class="secao__itens">
-            <div class="secao__itens__iten">
+            <div class="secao__itens__item">
 
                 <div class="secao__itens__dados">
-                    <ul class="id__nome">
-                        <li>#000002</li>
-                        <li>Notebook</li>
-                    </ul>
-                    <span class="categoria">Eletrônicos</span>
-                    <ul class="SKU__quantidade">
-                        <li>SKU: 123456</li>
-                        <li>Quantidade: 45</li>
-                    </ul>
+                    <div class="id__categoria__sku">
+                        <p class="id">#000001</p>
+                        <p class="categoria">Escritório</p>
+                        <p class="sku">SKU: 123456</p>
+                    </div>
+                    <div class="nome__quantidade">
+                        <p class="nome">Camisa codifica+</p>
+                        <p class="quantidade">Quantidade: 100</p>
+                    </div>
                 </div>
 
                 <div class="secao__itens__botoes">
-                    <ul class="box__botoes">
-                        <li>
-                            <a href="#">Editar</a>
-                        </li>
-                        <li>
-                            <a href="#">Deletar</a>
-                        </li>
-                    </ul>
-                </div>                
+                    <div class="box__botoes">
+                        <button class="botao__editar">Editar</button>
+                        <button class="botao__deletar">Deletar</button>
+                    </div>
+                </div> 
+
             </div>
         </div>
 
         <div class="secao__itens">
-            <div class="secao__itens__iten">
+            <div class="secao__itens__item">
 
                 <div class="secao__itens__dados">
-                    <ul class="id__nome">
-                        <li>#000003</li>
-                        <li>Cardeno anotação</li>
-                    </ul>
-                    <span class="categoria">Escritório</span>
-                    <ul class="SKU__quantidade">
-                        <li>SKU: 123456</li>
-                        <li>Quantidade: 100</li>
-                    </ul>
+                    <div class="id__categoria__sku">
+                        <p class="id">#000002</p>
+                        <p class="categoria">Eletrônicos</p>
+                        <p class="sku">SKU: 123456</p>
+                    </div>
+                    <div class="nome__quantidade">
+                        <p class="nome">Notebook</p>
+                        <p class="quantidade">Quantidade: 45</p>
+                    </div>
                 </div>
 
                 <div class="secao__itens__botoes">
-                    <ul class="box__botoes">
-                        <li>
-                            <a href="#">Editar</a>
-                        </li>
-                        <li>
-                            <a href="#">Deletar</a>
-                        </li>
-                    </ul>
-                </div>                
+                    <div class="box__botoes">
+                        <button class="botao__editar">Editar</button>
+                        <button class="botao__deletar">Deletar</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="secao__itens">
+            <div class="secao__itens__item">
+
+                <div class="secao__itens__dados">
+                    <div class="id__categoria__sku">
+                        <p class="id">#000003</p>
+                        <p class="categoria">Escritório</p>
+                        <p class="sku">SKU: 123456</p>
+                    </div>
+                    <div class="nome__quantidade">
+                        <p class="nome">Caderno anotação</p>
+                        <p class="quantidade">Quantidade: 100</p>
+                    </div>
+                </div>
+
+                <div class="secao__itens__botoes">
+                    <div class="box__botoes">
+                        <button class="botao__editar">Editar</button>
+                        <button class="botao__deletar">Deletar</button>
+                    </div>
+                </div>
+
             </div>
         </div>
 
