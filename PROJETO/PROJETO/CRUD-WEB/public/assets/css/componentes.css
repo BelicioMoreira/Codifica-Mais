@@ -1,0 +1,85 @@
+button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+::placeholder {
+    color: #333333;
+}
+
+.cabecalho__botao {
+    background-color: #009e97;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.cabecalho__busca {
+    border-radius: 1rem;
+    width: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra__busca {
+    width: 100%;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    backdrop-filter: blur(2rem) saturate(200%);
+}
+
+.barra__busca input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: #333333;
+}
+
+.barra__busca button {
+    border: 0;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    color: #ccc;
+}
+
+.barra__busca button img{
+    width: 1.5rem;
+    color: #ccc;
+}
+
+.botao__editar, .botao__deletar{
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.botao__editar {
+    background-color: #00b5ad;
+    color: #ffffff;
+}
+
+.botao__deletar {
+    background-color: #ff5722;
+    color: #ffffff;
+}
+
+.botao__editar:hover {
+    background-color: #009e97;
+}
+
+.botao__deletar:hover {
+    background-color: #c0392b;
+}

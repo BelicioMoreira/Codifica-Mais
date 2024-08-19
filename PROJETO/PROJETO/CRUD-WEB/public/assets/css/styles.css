@@ -1,0 +1,99 @@
+@import url(base.css);
+@import url(componentes.css);
+@import url(estrutura.css);
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+
+.secao__itens {
+    background-color: #e6e6e6;
+    border-radius: 1rem;
+    margin-inline: 2rem;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.secao__itens__item {
+    padding: 1rem;
+}
+
+
+.secao__itens__dados {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+}
+
+.id__categoria__sku {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0.3rem;
+}
+
+.id {
+    padding: 0.3rem;
+}
+
+.categoria {
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+}
+
+.categoria__eletronicos {
+    background-color: var(--cor-eletronicos);
+}
+
+.categoria__eletrodomesticos {
+    background-color: var(--cor-eletrodomesticos);
+}
+
+.categoria__moveis {
+    background-color: var(--cor-moveis);
+}
+
+.categoria__decoracao {
+    background-color: var(--cor-decoracao);
+}
+
+.categoria__vestuario {
+    background-color: var(--cor-vestuario);
+}
+
+.categoria__outros {
+    background-color: var(--cor-outros);
+}
+
+.sku {
+    padding: 0.3rem;
+    flex-grow: 4;
+    text-align: end;
+}
+
+.nome__quantidade {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 0.3rem;
+}
+
+.nome {
+    color: #333;
+}
+
+.quantidade {
+    color: #4caf50;
+    font-weight: bold;
+}
+
+/* .secao__itens__botoes {
+
+} */
+
+.box__botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border-top: 1rem;
+    border-color: black;
+}

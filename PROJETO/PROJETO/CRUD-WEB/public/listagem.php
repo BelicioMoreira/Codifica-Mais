@@ -8,26 +8,26 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <title>Listagem de produtos</title>
 </head>
 <body>    
     <main>
 
-        <div class="secao__cabecalho">
-
-            <button class="cabecalho__botao">Novo Item</button>
+        <header>
+            <!-- <a href="formulario.php" class="cabecalho__botao">Novo Item</a>
 
             <div class="cabecalho__busca">
                 <form action="" class="barra__busca">
                     <input type="text" placeholder="Buscar item" name="q">
-                    <button type="submit"><img src="img/search.png" alt="Buscar"></button>
+                    <button type="submit"><img src="assets/images/search.png" alt="Buscar"></button>
                 </form>
-            </div>
-            
-        </div>
+            </div>             -->
+        </header>
 
-        <div class="secao__itens">
+    <div class="conteudo">
+
+        <!-- <div class="secao__itens">
             <div class="secao__itens__item">
 
                 <div class="secao__itens__dados">
@@ -75,7 +75,7 @@ session_start();
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
         <div class="secao__itens">
             <div class="secao__itens__item">
@@ -101,6 +101,8 @@ session_start();
 
             </div>
         </div>
+
+    </div>
 
     </main>
 </body>
