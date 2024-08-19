@@ -15,13 +15,16 @@ session_start();
     <main>
 
         <div class="secao__cabecalho">
+
             <button class="cabecalho__botao">Novo Item</button>
+
             <div class="cabecalho__busca">
-                <div>Buscar item</div>
-                <form action="users.php" method="GET">
-                    <input id="search" name="search" type="text" divlaceholder="Buscar item">
+                <form action="" class="barra__busca">
+                    <input type="text" placeholder="Buscar item" name="q">
+                    <button type="submit"><img src="img/search.png" alt="Buscar"></button>
                 </form>
             </div>
+            
         </div>
 
         <div class="secao__itens">
@@ -30,7 +33,7 @@ session_start();
                 <div class="secao__itens__dados">
                     <div class="id__categoria__sku">
                         <p class="id">#000001</p>
-                        <p class="categoria">Escritório</p>
+                        <p class="categoria categoria__vestuario">Vestuário</p>
                         <p class="sku">SKU: 123456</p>
                     </div>
                     <div class="nome__quantidade">
@@ -55,7 +58,7 @@ session_start();
                 <div class="secao__itens__dados">
                     <div class="id__categoria__sku">
                         <p class="id">#000002</p>
-                        <p class="categoria">Eletrônicos</p>
+                        <p class="categoria categoria__eletronicos">Eletrônicos</p>
                         <p class="sku">SKU: 123456</p>
                     </div>
                     <div class="nome__quantidade">
@@ -80,7 +83,7 @@ session_start();
                 <div class="secao__itens__dados">
                     <div class="id__categoria__sku">
                         <p class="id">#000003</p>
-                        <p class="categoria">Escritório</p>
+                        <p class="categoria categoria__outros">Escritório</p>
                         <p class="sku">SKU: 123456</p>
                     </div>
                     <div class="nome__quantidade">
