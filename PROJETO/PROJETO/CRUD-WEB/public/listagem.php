@@ -27,7 +27,7 @@ session_start();
 
     <div class="conteudo listagem">
 
-        <div class="secao__itens">
+        <div class="secao__itens vestuario">
             <div class="secao__itens__item">
 
                 <div class="secao__itens__dados">
@@ -44,7 +44,7 @@ session_start();
 
                 <div class="secao__itens__botoes">
                     <div class="box__botoes">
-                        <button class="botao__editar">Editar</button>
+                        <a href="editar.php" class="botao__editar">Editar</a>
                         <button class="botao__deletar">Deletar</button>
                     </div>
                 </div> 
@@ -52,7 +52,7 @@ session_start();
             </div>
         </div>
 
-        <div class="secao__itens">
+        <div class="secao__itens eletronicos">
             <div class="secao__itens__item">
 
                 <div class="secao__itens__dados">
@@ -69,7 +69,7 @@ session_start();
 
                 <div class="secao__itens__botoes">
                     <div class="box__botoes">
-                        <button class="botao__editar">Editar</button>
+                        <a href="editar.php" class="botao__editar">Editar</a>
                         <button class="botao__deletar">Deletar</button>
                     </div>
                 </div>
@@ -77,7 +77,7 @@ session_start();
             </div>
         </div>
 
-        <div class="secao__itens">
+        <div class="secao__itens outros">
             <div class="secao__itens__item">
 
                 <div class="secao__itens__dados">
@@ -94,7 +94,7 @@ session_start();
 
                 <div class="secao__itens__botoes">
                     <div class="box__botoes">
-                        <button class="botao__editar">Editar</button>
+                        <a href="editar.php" class="botao__editar">Editar</a>
                         <button class="botao__deletar">Deletar</button>
                     </div>
                 </div>
@@ -102,7 +102,7 @@ session_start();
             </div>
         </div>
 
-        <div class="secao__itens">
+        <div class="secao__itens eletrodomesticos">
             <div class="secao__itens__item">
 
                 <div class="secao__itens__dados">
@@ -119,7 +119,7 @@ session_start();
 
                 <div class="secao__itens__botoes">
                     <div class="box__botoes">
-                        <button class="botao__editar">Editar</button>
+                        <a href="editar.php" class="botao__editar">Editar</a>
                         <button class="botao__deletar">Deletar</button>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ session_start();
             </div>
         </div>
 
-        <div class="secao__itens">
+        <div class="secao__itens decoracao">
             <div class="secao__itens__item">
 
                 <div class="secao__itens__dados">
@@ -144,7 +144,7 @@ session_start();
 
                 <div class="secao__itens__botoes">
                     <div class="box__botoes">
-                        <button class="botao__editar">Editar</button>
+                        <a href="editar.php" class="botao__editar">Editar</a>
                         <button class="botao__deletar">Deletar</button>
                     </div>
                 </div>
@@ -152,7 +152,7 @@ session_start();
             </div>
         </div>
 
-        <div class="secao__itens">
+        <div class="secao__itens moveis">
             <div class="secao__itens__item">
 
                 <div class="secao__itens__dados">
@@ -169,7 +169,7 @@ session_start();
 
                 <div class="secao__itens__botoes">
                     <div class="box__botoes">
-                        <button class="botao__editar">Editar</button>
+                        <a href="editar.php" class="botao__editar">Editar</a>
                         <button class="botao__deletar">Deletar</button>
                     </div>
                 </div>

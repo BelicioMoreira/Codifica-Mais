@@ -23,7 +23,7 @@ session_start();
             </div>            
         </header>
 
-        <div class="conteudo">
+        <div class="conteudo formulario">
 
         </div>
 

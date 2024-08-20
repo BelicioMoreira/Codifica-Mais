@@ -10,7 +10,38 @@
     padding: 0.5rem;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
     animation: appear 0.8s linear;
+    animation-timeline: view();
 }
+
+/* .eletronicos:hover {
+    box-shadow: 0px 4px 12px var(--cor-eletronicos);
+    transition-duration: 0.7s;
+}
+
+.eletrodomesticos:hover {
+    box-shadow: 0px 4px 12px var(--cor-eletrodomesticos);
+    transition-duration: 0.7s;
+}
+
+.moveis:hover {
+    box-shadow: 0px 4px 12px var(--cor-moveis);
+    transition-duration: 0.7s;
+}
+    
+.decoracao:hover {
+    box-shadow: 0px 4px 12px var(--cor-decoracao);
+    transition-duration: 0.7s;
+}
+
+.vestuario:hover {
+    box-shadow: 0px 4px 12px var(--cor-vestuario);
+    transition-duration: 0.7s;
+}
+
+.outros:hover {
+    box-shadow: 0px 4px 12px var(--cor-outros);
+    transition-duration: 0.7s;
+} */
 
 .secao__itens__item {
     padding: 1rem;

@@ -32,7 +32,11 @@ header {
    padding: 1rem;
 }
 
-.conteudo .listagem {
-    overflow: hidden;
+.listagem {
+    overflow: visible;
     overflow-y: scroll;
+}
+
+.formulario, .editar {
+    min-height: 65vh;
 }
