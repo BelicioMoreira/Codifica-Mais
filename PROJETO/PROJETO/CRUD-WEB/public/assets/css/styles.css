@@ -2,6 +2,7 @@
 @import url(componentes.css);
 @import url(estrutura.css);
 @import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
 
 .secao__itens {
     background-color: #e6e6e6;
@@ -9,8 +10,8 @@
     margin: 1rem;
     padding: 0.5rem;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
-    animation: appear 0.8s linear;
-    animation-timeline: view();
+    animation: appear 0.4s;
+    animation-timeline: scroll(scroller axis);
 }
 
 /* .eletronicos:hover {

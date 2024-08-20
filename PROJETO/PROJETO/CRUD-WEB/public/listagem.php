@@ -15,12 +15,16 @@ session_start();
     <main>
 
         <header>
-            <a href="formulario.php" class="cabecalho__botao">Novo Item</a>
+            <a href="formulario.php" class="cabecalho__botao">Novo Item
+                <i class="fa fa-plus" aria-hidden="true"></i>
+            </a>
 
             <div class="cabecalho__busca">
                 <form action="" class="barra__busca">
                     <input type="text" placeholder="Buscar item" name="q">
-                    <button type="submit"><img src="assets/images/search.png" alt="Buscar"></button>
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
                 </form>
             </div>            
         </header>
@@ -44,8 +48,12 @@ session_start();
 
                 <div class="secao__itens__botoes">
                     <div class="box__botoes">
-                        <a href="editar.php" class="botao__editar">Editar</a>
-                        <button class="botao__deletar">Deletar</button>
+                        <a href="editar.php" class="botao__editar">Editar
+                            <i class="fa-solid fa-pen-to-square"></i>
+                        </a>
+                        <button class="botao__deletar">Deletar
+                            <i class="fa-solid fa-trash"></i>
+                        </button>
                     </div>
                 </div> 
 
@@ -178,7 +186,7 @@ session_start();
         </div>
 
     </div>
-
+    
     </main>
 </body>
 </html>

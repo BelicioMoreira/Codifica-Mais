@@ -2,6 +2,7 @@
     from{
         opacity: 0;
         scale: 0;
+        height: 100%;
     }
     to{
         opacity: 1;
@@ -9,18 +10,13 @@
     }
 }
 
-::-webkit-scrollbar {
-    width: 12px;
+.listagem::-webkit-scrollbar {
+    background: transparent;
 }
-                    
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgb(0, 255, 55); 
-    border-radius: 10px;
-}
-                    
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 6px rgba(0, 255, 55, 0.5); 
+
+.listagem::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 1rem;
 }
 
 button {
@@ -110,7 +106,7 @@ button {
     transition: 0.7s ease,
     padding 1s linear;
     opacity: 1;
-    transform: translateY(0.3rem);
+    transform: translateY(0.2rem);
     transition-duration: 0.55s;
 }
 
@@ -123,6 +119,6 @@ button {
 }
 
 .botao__editar:active, .botao__deletar:active {
-    transform: translatey(0.5rem);
-    transition-duration: 0.25s;
+    transform: translateX(0.5rem);
+    transition-duration: 0.2s;
 }
