@@ -6,16 +6,15 @@
 .secao__itens {
     background-color: #e6e6e6;
     border-radius: 1rem;
-    margin-inline: 2rem;
-    margin-bottom: 1rem;
+    margin: 1rem;
     padding: 0.5rem;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    animation: appear 0.8s linear;
 }
 
 .secao__itens__item {
     padding: 1rem;
 }
-
 
 .secao__itens__dados {
     display: flex;

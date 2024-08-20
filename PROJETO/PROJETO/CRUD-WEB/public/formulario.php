@@ -16,7 +16,11 @@ session_start();
     <main>
 
         <header>
-            <!-- <h1>Novo Item</h1> -->
+            <a href="listagem.php" class="cabecalho__botao">Voltar</a>
+
+            <div class="cabecalho__busca">
+                <h1>Novo Item</h1>
+            </div>            
         </header>
 
         <div class="conteudo">

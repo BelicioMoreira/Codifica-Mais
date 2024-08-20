@@ -18,14 +18,21 @@ header {
     background-color: #e6e6e6;
     border-radius: 1rem;
     margin-inline: 1rem;
-    margin-bottom: 4rem;
+    margin-bottom: 3rem;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
+    min-height: 4rem;
 }
 
 .conteudo {
    background-color: #e6e6e6;
    border-radius: 1rem;
-   min-height: fit-content;
+   max-height: 65vh;
+   padding: 1rem;
+}
+
+.conteudo .listagem {
+    overflow: hidden;
+    overflow-y: scroll;
 }
