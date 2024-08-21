@@ -25,43 +25,45 @@ session_start();
 
         <div class="conteudo formulario">
 
-            <div class="nome">
-                <div class="formulario__nome">
-                    <label class ="formulario__nome nome__item">
+            <div class="nome__formulario">
+                <div class="caixa__nome">
+                    <label class ="nome__formulario__texto">
                         Nome do item <span clas="asterisco">*</span>
                     </label>
                     <input type="text" id="nomeItem" name="nomeItem">
                 </div>
             </div>
 
-            <div class="sku__unidade">
-                <div>
+            <div class="sku__unidade__formulario">
+                <div class="sku__formulario">
                     <label>SKU <span clas="asterisco">*</span></label>
                     <input type="text" id="nomeItem" name="nomeItem">
                 </div>
-                <div>
+
+                <div class="unidade__formulario">
                     <label>Unidade de Medida <span clas="asterisco">*</span></label>
                     <input type="text" id="nomeItem" name="nomeItem">
                 </div>
             </div> 
 
-            <div class="valor__quantidade">
-                <div>
+            <div class="valor__quantidade__formulario">
+                <div class="valor__formulario">
                     <label>Valor <span clas="asterisco">*</span></label>
                     <input type="text" id="nomeItem" name="nomeItem">
                 </div>
                 
-                <div>
+                <div class ="quantidade__formulario">
                     <label>Quantidade <span clas="asterisco">*</span></label>
                     <input type="text" id="nomeItem" name="nomeItem">
                 </div>
             </div>          
             
-            <div class="categoria__botao">
-                <div>
+            <div class="categoria__ebotao__formulario">
+                <div class="categoria__formulario">
                     <label>Categoria <span clas="asterisco">*</span></label>
                     <input type="text" id="nomeItem" name="nomeItem">
                 </div>
+
                 <button class="cabecalho__botao">Criar item
                     <i class="fa-solid fa-check"></i>
                 </button>

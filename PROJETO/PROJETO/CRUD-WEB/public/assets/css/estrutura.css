@@ -43,22 +43,28 @@ header {
     min-height: 65vh;
 }
 
-.formulario__nome {
-    background: transparent;
+.nome__formulario, .sku__unidade__formulario, .valor__quantidade__formulario, .categoria__ebotao__formulario {
+    margin: 1rem;
+    padding: 1rem;
     display: flex;
-    flex-direction: column;
-
+    justify-content: space-between;
 }
 
-.formulario__nome input {
+.caixa__nome, .sku__formulario, .unidade__formulario, .valor__formulario, .quantidade__formulario, .categoria__formulario {
+    display: flex;
+    flex-direction: column;
+}
+
+.nome__formulario input, .sku__formulario input, .unidade__formulario input, .valor__formulario input, .quantidade__formulario input, .categoria__formulario input {
     background-color: #ffffff;
     flex: 1;
     border: 0;
     outline: none;
     padding: 0.5rem;
     color: #333333;
+    border-radius: 0.3rem;
 }
 
-.nome__item {
+.nome__formulario__texto {
     flex-direction: row;
 }
