@@ -28,45 +28,45 @@ session_start();
             <div class="nome__formulario">
                 <div class="caixa__nome">
                     <label class ="nome__formulario__texto">
-                        Nome do item <span clas="asterisco">*</span>
+                        Nome do item <span class="asterisco">*</span>
                     </label>
-                    <div class="boxteste"><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <div><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
             </div>
 
             <div class="sku__unidade__formulario">
                 <div class="sku__formulario">
-                    <label>SKU <span clas="asterisco">*</span></label>
-                    <div class="boxteste"><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <label>SKU <span class="asterisco">*</span></label>
+                    <input type="text" id="nomeItem" name="nomeItem">
                 </div>
 
                 <div class="unidade__formulario">
-                    <label>Unidade de Medida <span clas="asterisco">*</span></label>
-                    <div class="boxteste"><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <label>Unidade de Medida <span class="asterisco">*</span></label>
+                    <input type="text" id="nomeItem" name="nomeItem">
                 </div>
             </div> 
 
             <div class="valor__quantidade__formulario">
                 <div class="valor__formulario">
-                    <label>Valor <span clas="asterisco">*</span></label>
-                    <div class="boxteste"><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <label>Valor <span class="asterisco">*</span></label>
+                    <input type="text" id="nomeItem" name="nomeItem">
                 </div>
                 
                 <div class ="quantidade__formulario">
-                    <label>Quantidade <span clas="asterisco">*</span></label>
-                    <div><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <label>Quantidade <span class="asterisco">*</span></label>
+                    <input type="text" id="nomeItem" name="nomeItem">
                 </div>
             </div>          
             
             <div class="categoria__ebotao__formulario">
                 <div class="categoria__formulario">
-                    <label>Categoria <span clas="asterisco">*</span></label>
+                    <label>Categoria <span class="asterisco">*</span></label>
                     <select id="comp">
-                        <option value="sass">Sass</option>
-                        <option value="less">Less</option>
-                        <option value="stylus">Stylus</option>
-                        <option value="postcss">PostCSS</option>
-                        <option value="other">Other</option>
+                        <option value="eletrodomisticos">Eletrodomésticos</option>
+                        <option value="moveis">Móveis</option>
+                        <option value="decoracao">Decoração</option>
+                        <option value="vestuario">Vestuário</option>
+                        <option value="outros">Outros</option>
                     </select>
                 </div>
 
@@ -74,7 +74,7 @@ session_start();
                     <i class="fa-solid fa-check"></i>
                 </button>
             </div>
-
+            <p class="texto__inferior">Os campos marcadoscampos marcados com asterisco (<span class="asterisco">*</span>) são de preenchimento obrigatório</p>
         </div>
     </main>
 

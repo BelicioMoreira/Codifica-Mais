@@ -29,7 +29,6 @@ header {
    background-color: #e6e6e6;
    border-radius: 1rem;
    max-height: 65vh;
-   padding: 1rem;
 }
 
 .listagem {
@@ -45,7 +44,6 @@ header {
 
 .nome__formulario, .sku__unidade__formulario, .valor__quantidade__formulario, .categoria__ebotao__formulario {
     margin: 1rem;
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -61,11 +59,8 @@ header {
     flex: 1;
     border: 0;
     outline: none;
-    padding: 0.5rem;
     color: #333333;
     border-radius: 0.3rem;
-}
-
-.boxteste {
-    padding: 1rem;
+    width: 100%;
+    font-size: 1.5rem;
 }

@@ -112,3 +112,8 @@ button {
   -moz-appearance: none;
   appearance: none;
 }
+
+.texto__iferior {
+    display: flex;
+    justify-content: center;
+}
