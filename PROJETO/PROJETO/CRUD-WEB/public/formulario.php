@@ -30,38 +30,44 @@ session_start();
                     <label class ="nome__formulario__texto">
                         Nome do item <span clas="asterisco">*</span>
                     </label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <div class="boxteste"><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
             </div>
 
             <div class="sku__unidade__formulario">
                 <div class="sku__formulario">
                     <label>SKU <span clas="asterisco">*</span></label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <div class="boxteste"><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
 
                 <div class="unidade__formulario">
                     <label>Unidade de Medida <span clas="asterisco">*</span></label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <div class="boxteste"><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
             </div> 
 
             <div class="valor__quantidade__formulario">
                 <div class="valor__formulario">
                     <label>Valor <span clas="asterisco">*</span></label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <div class="boxteste"><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
                 
                 <div class ="quantidade__formulario">
                     <label>Quantidade <span clas="asterisco">*</span></label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <div><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
             </div>          
             
             <div class="categoria__ebotao__formulario">
                 <div class="categoria__formulario">
                     <label>Categoria <span clas="asterisco">*</span></label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <select id="comp">
+                        <option value="sass">Sass</option>
+                        <option value="less">Less</option>
+                        <option value="stylus">Stylus</option>
+                        <option value="postcss">PostCSS</option>
+                        <option value="other">Other</option>
+                    </select>
                 </div>
 
                 <button class="cabecalho__botao">Criar item

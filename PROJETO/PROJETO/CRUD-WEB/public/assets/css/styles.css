@@ -14,36 +14,6 @@
     animation-timeline: scroll(scroller axis);
 }
 
-/* .eletronicos:hover {
-    box-shadow: 0px 4px 12px var(--cor-eletronicos);
-    transition-duration: 0.7s;
-}
-
-.eletrodomesticos:hover {
-    box-shadow: 0px 4px 12px var(--cor-eletrodomesticos);
-    transition-duration: 0.7s;
-}
-
-.moveis:hover {
-    box-shadow: 0px 4px 12px var(--cor-moveis);
-    transition-duration: 0.7s;
-}
-    
-.decoracao:hover {
-    box-shadow: 0px 4px 12px var(--cor-decoracao);
-    transition-duration: 0.7s;
-}
-
-.vestuario:hover {
-    box-shadow: 0px 4px 12px var(--cor-vestuario);
-    transition-duration: 0.7s;
-}
-
-.outros:hover {
-    box-shadow: 0px 4px 12px var(--cor-outros);
-    transition-duration: 0.7s;
-} */
-
 .secao__itens__item {
     padding: 1rem;
 }
@@ -52,6 +22,8 @@
     display: flex;
     flex-direction: column;
     font-size: 1.5rem;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
 }
 
 .id__categoria__sku {
@@ -68,6 +40,7 @@
 .categoria {
     padding: 0.3rem 0.7rem;
     border-radius: 0.5rem;
+    color: var(--cor-input);
 }
 
 .categoria__eletronicos {
@@ -117,10 +90,6 @@
     font-weight: bold;
 }
 
-/* .secao__itens__botoes {
-
-} */
-
 .box__botoes {
     display: flex;
     justify-content: space-between;
@@ -131,4 +100,15 @@
 
 .asterisco {
     color: red;
+}
+
+legend,
+fieldset,
+select,
+textarea,
+input,
+button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
