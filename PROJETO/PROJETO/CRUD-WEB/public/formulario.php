@@ -70,11 +70,15 @@ session_start();
                     </select>
                 </div>
 
-                <button class="cabecalho__botao">Criar item
+                <button class="botao__criar">Criar item
                     <i class="fa-solid fa-check"></i>
                 </button>
             </div>
-            <p class="texto__inferior">Os campos marcadoscampos marcados com asterisco (<span class="asterisco">*</span>) são de preenchimento obrigatório</p>
+
+            <div class="texto__inferior">
+                <p>Os campos marcados com asterisco (<span class="asterisco">*</span>) são de preenchimento obrigatório</p>
+            </div>
+
         </div>
     </main>
 

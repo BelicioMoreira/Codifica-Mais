@@ -28,14 +28,14 @@ header {
 .conteudo {
    background-color: #e6e6e6;
    border-radius: 1rem;
-   max-height: 65vh;
+   max-height: 60vh;
 }
 
 .listagem {
     overflow: visible;
     overflow-block: auto;
     overflow-y: scroll;
-    min-height: 65vh;
+    max-height: 65vh;
 }
 
 .formulario, .editar {
@@ -43,7 +43,8 @@ header {
 }
 
 .nome__formulario, .sku__unidade__formulario, .valor__quantidade__formulario, .categoria__ebotao__formulario {
-    margin: 1rem;
+    margin: 0.5rem;
+    margin-inline: 1rem;
     display: flex;
     justify-content: space-between;
 }
@@ -54,13 +55,21 @@ header {
     font-size: 1.5rem;
 }
 
+.caixa__nome{
+    flex: 1;
+}
+
 .nome__formulario input, .sku__formulario input, .unidade__formulario input, .valor__formulario input, .quantidade__formulario input, .categoria__formulario input {
     background-color: #ffffff;
-    flex: 1;
     border: 0;
     outline: none;
     color: #333333;
     border-radius: 0.3rem;
     width: 100%;
     font-size: 1.5rem;
+}
+
+.texto__inferior {
+    font-size: small;
+    margin: 2rem 1rem 1rem 1rem;
 }

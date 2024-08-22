@@ -102,18 +102,20 @@
     color: red;
 }
 
-legend,
-fieldset,
-select,
-textarea,
-input,
-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+select {
+    background-color: #ffffff;
+    border: 0;
+    outline: none;
+    color: #333333;
+    border-radius: 0.3rem;
+    width: 100%;
+    font-size: 1.5rem;
 }
 
-.texto__iferior {
-    display: flex;
-    justify-content: center;
+a {
+    text-decoration: none;
+}
+
+label {
+    padding: 0.5rem;
 }

@@ -34,7 +34,7 @@ button {
     color: #ffffff;
     border-radius: 0.5rem;
     font-size: 1.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
     cursor: pointer;
 }
 
@@ -121,6 +121,15 @@ button {
 .botao__editar:active, .botao__deletar:active {
     transform: translateX(0.5rem);
     transition-duration: 0.2s;
+}
+
+.botao__criar, .botao__atualizar {
+    background-color: #009e97;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
 }
 
 .fa-rotate:active {
