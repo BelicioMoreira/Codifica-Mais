@@ -25,7 +25,7 @@ session_start();
 
         <div class="conteudo formulario">
 
-        <form action="formTest.php" method="post">
+        <form action="formTest.php" method="POST">
             <div class="nome__formulario">
                 <div class="caixa__nome">
                     <label class ="nome__formulario__texto">
@@ -85,12 +85,12 @@ session_start();
                     </div>
                 </div>
 
-                <button class="botao__criar">Criar item
+                <button name="cadastrar" type="submit" class="botao__criar">Criar item
                     <i class="fa-solid fa-check"></i>
                 </button>
             </div>
 
-            <div type="submit" class="texto__inferior">
+            <div class="texto__inferior">
                 <p>Os campos marcados com asterisco (<span class="asterisco">*</span>) são de preenchimento obrigatório</p>
             </div>
         </form>
