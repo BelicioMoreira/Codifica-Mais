@@ -15,7 +15,7 @@
 }
 
 .listagem::-webkit-scrollbar-thumb {
-    background: #ccc;
+    background: var(--cor-borda);
     border-radius: 1rem;
 }
 
@@ -26,16 +26,19 @@ button {
 }
 
 ::placeholder {
-    color: #333333;
+    color: var(--cor-texto-input);
 }
 
 .cabecalho__botao {
-    background-color: #009e97;
-    color: #ffffff;
+    background-color: var(--cor-botao-editar);
+    color: var(--cor-input);
     border-radius: 0.5rem;
     font-size: 1.5rem;
     padding: 1rem;
     cursor: pointer;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    font-size: 2rem;
 }
 
 .cabecalho__busca {
@@ -48,7 +51,7 @@ button {
 
 .barra__busca {
     width: 100%;
-    background-color: #ffffff;
+    background-color: var(--cor-input);
     display: flex;
     align-items: center;
     border-radius: 1rem;
@@ -63,7 +66,7 @@ button {
     outline: none;
     padding: 0.5rem;
     font-size: 1.5rem;
-    color: #333333;
+    color: var(--cor-texto-input);
 }
 
 .barra__busca button {
@@ -72,12 +75,12 @@ button {
     width: 2.5rem;
     height: 2.5rem;
     cursor: pointer;
-    color: #ccc;
+    color: var(--cor-input);
 }
 
 .barra__busca button img{
     width: 1.5rem;
-    color: #ccc;
+    color: var(--cor-input);
 }
 
 .botao__editar, .botao__deletar{
@@ -86,12 +89,13 @@ button {
     padding: 0.5rem;
     cursor: pointer;
     border-radius: 8px;
-    box-shadow: rgba(39, 174, 96, .15) 0 4px 9px;
+    box-shadow: var(--cor-fundo), 0 4px 9px;
     backface-visibility: hidden;
+    font-family: var(--fonte-principal);
 }
 
 .botao__editar, .botao__deletar {
-    color: #ffffff;
+    color: var(--cor-input);
 }
 
 .botao__editar {
@@ -102,15 +106,7 @@ button {
     background-color: var(--cor-botao-deletar);
 }
 
-.botao__editar:hover, .botao__deletar:hover {
-    transition: 0.7s ease,
-    padding 1s linear;
-    opacity: 1;
-    transform: translateY(0.2rem);
-    transition-duration: 0.55s;
-}
-
-.botao__editar:hover {
+.botao__editar:hover, .botao__criar:hover, .botao__atualizar:hover, .cabecalho__botao:hover, .cabecalho__botao.voltar:hover{
     background-color: var(--cor-botao-editar-hover);
 }
 
@@ -118,25 +114,29 @@ button {
     background-color: var(--cor-botao-deletar-hover);
 }
 
-.botao__editar:active, .botao__deletar:active {
-    transform: translateX(0.5rem);
-    transition-duration: 0.2s;
+.botao__editar:active, .botao__atualizar:active, .botao__criar:active, .cabecalho__botao:active, .cabecalho__botao.cabecalho__botao.voltar:active {
+    background-color: var(--cor-botao-editar)
+}
+
+.botao__deletar:active {
+    background-color: var(--cor-botao-deletar);
 }
 
 .botao__criar, .botao__atualizar {
-    background-color: #009e97;
-    color: #ffffff;
+    background-color: var(--cor-botao-editar);
+    color: var(--cor-input);
     border-radius: 0.5rem;
     font-size: 1.5rem;
     padding: 1rem;
     cursor: pointer;
+    font-family: var(--fonte-principal);
 }
 
-.fa-rotate:active {
+/* .fa-rotate:active {
     -moz-transform:rotate(360deg);
     -webkit-transform:rotate(360deg);
     transform:rotate(360deg);
     -moz-transition: all .5s linear;
     -webkit-transition: all .5s linear;
     transition: all .5s linear;
-}
+} */
