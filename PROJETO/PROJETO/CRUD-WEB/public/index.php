@@ -30,7 +30,6 @@ $_SESSION['produtos'] = [
 $controlador = new Produtos();
 
 $lista = $controlador->listar();
-die;
 
 // Define o array de categorias, unidades de medida e produtos
 $_SESSION['categorias'] = [

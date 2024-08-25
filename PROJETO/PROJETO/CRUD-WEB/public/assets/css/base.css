@@ -5,12 +5,12 @@
 
 :root {
     --cor-fundo: #3b3b3b;
-    --cor-botao-editar: #4caf50;
-    --cor-botao-deletar: #ff5722;
+    --cor-botao-editar: #028506;
+    --cor-botao-deletar: #b80101;
     --cor-texto-input: #333333;
     --cor-input: #ffffff;
-    --cor-botao-editar-hover: #15964f;
-    --cor-botao-deletar-hover: #c0392b;
+    --cor-botao-editar-hover: #005e2a;
+    --cor-botao-deletar-hover: #440700;
     --cor-fundo-item: #ccc;;
     --cor-cabecalho: #e6e6e6;
     --cor-borda: #cccccc;

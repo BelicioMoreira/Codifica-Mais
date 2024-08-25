@@ -38,7 +38,7 @@ button {
     cursor: pointer;
     font-family: var(--fonte-principal);
     font-weight: 400;
-    font-size: 2rem;
+    min-width: 7rem;
 }
 
 .cabecalho__busca {
@@ -130,6 +130,8 @@ button {
     padding: 1rem;
     cursor: pointer;
     font-family: var(--fonte-principal);
+    max-height: 4rem;
+    margin-top: auto;
 }
 
 /* .fa-rotate:active {

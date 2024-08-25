@@ -73,3 +73,16 @@ header {
     font-size: small;
     margin: 2rem 1rem 1rem 1rem;
 }
+
+.formulario__input {
+    background-color: var(--cor-input);
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    backdrop-filter: blur(2rem) saturate(200%);
+}
+
+.select{
+    width: 133%;
+}

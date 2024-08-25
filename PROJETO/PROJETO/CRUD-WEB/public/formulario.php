@@ -30,44 +30,46 @@ session_start();
                     <label class ="nome__formulario__texto">
                         Nome do item <span class="asterisco">*</span>
                     </label>
-                    <div><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
             </div>
 
             <div class="sku__unidade__formulario">
                 <div class="sku__formulario">
                     <label>SKU <span class="asterisco">*</span></label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
 
                 <div class="unidade__formulario">
                     <label>Unidade de Medida <span class="asterisco">*</span></label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
             </div> 
 
             <div class="valor__quantidade__formulario">
                 <div class="valor__formulario">
                     <label>Valor <span class="asterisco">*</span></label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
                 
                 <div class ="quantidade__formulario">
                     <label>Quantidade <span class="asterisco">*</span></label>
-                    <input type="text" id="nomeItem" name="nomeItem">
+                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
                 </div>
             </div>          
             
             <div class="categoria__ebotao__formulario">
                 <div class="categoria__formulario">
                     <label>Categoria <span class="asterisco">*</span></label>
-                    <select id="comp">
-                        <option value="eletrodomisticos">Eletrodomésticos</option>
-                        <option value="moveis">Móveis</option>
-                        <option value="decoracao">Decoração</option>
-                        <option value="vestuario">Vestuário</option>
-                        <option value="outros">Outros</option>
-                    </select>
+                    <div class="formulario__input select">
+                        <select id="comp">
+                            <option value="eletrodomisticos">Eletrodomésticos</option>
+                            <option value="moveis">Móveis</option>
+                            <option value="decoracao">Decoração</option>
+                            <option value="vestuario">Vestuário</option>
+                            <option value="outros">Outros</option>
+                        </select>
+                    </div>
                 </div>
 
                 <button class="botao__criar">Criar item

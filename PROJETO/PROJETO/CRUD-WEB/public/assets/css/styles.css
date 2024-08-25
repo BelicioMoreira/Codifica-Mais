@@ -128,3 +128,7 @@ h1 {
     font-family: var(--fonte-principal);
     font-weight: 900;
 }
+
+i {
+    margin: 0.3rem;
+}
