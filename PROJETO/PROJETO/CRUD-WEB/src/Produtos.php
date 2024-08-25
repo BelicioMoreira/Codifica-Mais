@@ -11,6 +11,32 @@ class Produtos
         $produtos = $_SESSION['produtos'];    
 
         foreach ($produtos as $produto) {
+            switch ($produto['categoria_id']) {
+                case 1:
+                    $categoria = "categoria__eletronicos";
+                    $categoriaNome ="Eletrônicos";
+                    break;
+                case 2:
+                    $categoria = "categoria__eletrodomesticos";
+                    $categoriaNome ="Eletrodomésticos";
+                    break;
+                case 3:
+                    $categoria = "categoria__moveis";
+                    $categoriaNome ="Móveis";
+                    break;
+                case 4:
+                    $categoria = "categoria__decoracao";
+                    $categoriaNome ="Decoração";
+                    break;
+                case 5:
+                    $categoria = "categoria__vestuario";
+                    $categoriaNome ="Vestuário";
+                    break;
+                case 7:
+                    $categoria = "categoria__outros";
+                    $categoriaNome ="Outros";
+                    break;        
+                }  
             ?>
                 <div class="secao__itens vestuario">
                     <div class="secao__itens__item">
@@ -18,7 +44,7 @@ class Produtos
                         <div class="secao__itens__dados">
                             <div class="id__categoria__sku">
                                 <p class="id">#00000<?php echo $produto['id'] ?></p>
-                                <p class="categoria categoria__vestuario"><?php echo $produto['categoria_id'] ?></p>
+                                <p class="categoria <?php echo $categoria;?>"><?php echo $categoriaNome;?></p>
                                 <p class="sku"><?php echo $produto['sku'] ?></p>
                             </div>
                             <div class="nome__quantidade">
@@ -43,7 +69,4 @@ class Produtos
             <?php
         }
     }
-
-    
-
 }
