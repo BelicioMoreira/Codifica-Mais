@@ -27,10 +27,6 @@ $_SESSION['produtos'] = [
     ],
 ];
 
-$controlador = new Produtos();
-
-$lista = $controlador->listar();
-
 // Define o array de categorias, unidades de medida e produtos
 $_SESSION['categorias'] = [
     '1' => 'Eletrônicos',
