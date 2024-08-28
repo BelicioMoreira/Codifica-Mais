@@ -25,36 +25,47 @@ session_start();
 
         <div class="conteudo formulario">
 
+        <form action="formTest.php" method="post">
             <div class="nome__formulario">
                 <div class="caixa__nome">
                     <label class ="nome__formulario__texto">
                         Nome do item <span class="asterisco">*</span>
                     </label>
-                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <div class="formulario__input">
+                        <input required type="text" pattern="^[a-zA-Z]+$" id="nome" name="nome">
+                    </div>
                 </div>
             </div>
 
             <div class="sku__unidade__formulario">
                 <div class="sku__formulario">
                     <label>SKU <span class="asterisco">*</span></label>
-                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <div class="formulario__input">
+                        <input required type="number" id="sku" name="sku">
+                    </div>
                 </div>
 
                 <div class="unidade__formulario">
                     <label>Unidade de Medida <span class="asterisco">*</span></label>
-                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <div class="formulario__input">
+                        <input required type="text" id="unidade_medida_id" name="unidade_medida_id">
+                    </div>
                 </div>
             </div> 
 
             <div class="valor__quantidade__formulario">
                 <div class="valor__formulario">
                     <label>Valor <span class="asterisco">*</span></label>
-                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <div class="formulario__input">
+                        <input required type="number" step="0.01" id="valor" name="valor">
+                    </div>
                 </div>
                 
                 <div class ="quantidade__formulario">
                     <label>Quantidade <span class="asterisco">*</span></label>
-                    <div class="formulario__input"><input type="text" id="nomeItem" name="nomeItem"></div>
+                    <div required class="formulario__input">
+                        <input required type="number" min="1" id="quantidade" name="quantidade">
+                    </div>
                 </div>
             </div>          
             
@@ -62,12 +73,14 @@ session_start();
                 <div class="categoria__formulario">
                     <label>Categoria <span class="asterisco">*</span></label>
                     <div class="formulario__input select">
-                        <select id="comp">
-                            <option value="eletrodomisticos">Eletrodomésticos</option>
-                            <option value="moveis">Móveis</option>
-                            <option value="decoracao">Decoração</option>
-                            <option value="vestuario">Vestuário</option>
-                            <option value="outros">Outros</option>
+                        <select required id="categoria_id" name="categoria_id">
+                            <option disabled selected>Selecione uma categoria</option>
+                            <option value="1">Eletrônicos</option>
+                            <option value="2">Eletrodomésticos</option>
+                            <option value="3">Móveis</option>
+                            <option value="4">Decoração</option>
+                            <option value="5">Vestuário</option>
+                            <option value="7">Outros</option>
                         </select>
                     </div>
                 </div>
@@ -77,9 +90,10 @@ session_start();
                 </button>
             </div>
 
-            <div class="texto__inferior">
+            <div type="submit" class="texto__inferior">
                 <p>Os campos marcados com asterisco (<span class="asterisco">*</span>) são de preenchimento obrigatório</p>
             </div>
+        </form>
 
         </div>
     </main>
