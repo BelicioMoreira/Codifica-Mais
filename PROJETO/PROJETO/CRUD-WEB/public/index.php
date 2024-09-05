@@ -3,8 +3,22 @@ session_start();
 
 require __DIR__.'/../vendor/autoload.php';
 
-
 use App\Produtos;
+
+$controlador = new Produtos();
+$caminho = rtrim($_SERVER['PATH_INFO'], '/');
+
+if ($caminho == '/produtos/criar') {
+    return $controlador->criar();
+}
+if ($caminho == '/produtos/editar') {
+    return $controlador->editar();
+}
+if ($caminho == '/produtos') {
+    return $controlador->listar();
+}
+
+echo "Página não encontrada :(";
 
 $_SESSION['produtos'] = [
     [
