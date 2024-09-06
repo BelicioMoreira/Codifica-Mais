@@ -3,7 +3,7 @@ session_start();
 
 require __DIR__.'/../vendor/autoload.php';
 
-use App\Produtos;
+use App\Controller\Produtos;
 
 $controlador = new Produtos();
 $caminho = rtrim($_SERVER['PATH_INFO'], '/');
