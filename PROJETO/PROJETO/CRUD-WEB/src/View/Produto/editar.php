@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Cadastro de produtos</title>
 </head>
 <body>
@@ -24,14 +24,14 @@
 
         <div class="conteudo formulario">
 
-        <form action="/produtos/criar" method="POST">
+        <form action="/produtos/salvar?id=<?= $produto['id'] ?>" method="POST">
             <div class="nome__formulario">
                 <div class="caixa__nome">
                     <label class ="nome__formulario__texto">
                         Nome do item <span class="asterisco">*</span>
                     </label>
                     <div class="formulario__input">
-                        <input required type="text" pattern="^[a-zA-Z]+$" id="nome" name="nome">
+                        <input required type="text" pattern="^[a-zA-Z]+$" id="nome" name="nome" value="<?= $produto['nome'] ?>">
                     </div>
                 </div>
             </div>
@@ -40,14 +40,14 @@
                 <div class="sku__formulario">
                     <label>SKU <span class="asterisco">*</span></label>
                     <div class="formulario__input">
-                        <input required type="number" id="sku" name="sku">
+                        <input required type="number" id="sku" name="sku" value="<?= $produto['sku'] ?>">
                     </div>
                 </div>
 
                 <div class="unidade__formulario">
                     <label>Unidade de Medida <span class="asterisco">*</span></label>
                     <div class="formulario__input">
-                        <input required type="text" id="unidade_medida_id" name="unidade_medida_id">
+                        <input required type="text" id="unidade_medida_id" name="unidade_medida_id" value="<?= $produto['nome'] ?>">
                     </div>
                 </div>
             </div> 
@@ -56,14 +56,14 @@
                 <div class="valor__formulario">
                     <label>Valor <span class="asterisco">*</span></label>
                     <div class="formulario__input">
-                        <input required type="number" step="0.01" id="valor" name="valor">
+                        <input required type="number" step="0.01" id="valor" name="valor" value="<?= $produto['valor'] ?>">
                     </div>
                 </div>
                 
                 <div class ="quantidade__formulario">
                     <label>Quantidade <span class="asterisco">*</span></label>
                     <div required class="formulario__input">
-                        <input required type="number" min="1" id="quantidade" name="quantidade">
+                        <input required type="number" min="1" id="quantidade" name="quantidade" value="<?= $produto['quantidade'] ?>">
                     </div>
                 </div>
             </div>          
@@ -84,7 +84,7 @@
                     </div>
                 </div>
 
-                <button name="cadastrar" type="submit" class="botao__criar">Criar item
+                <button name="cadastrar" type="submit" class="botao__criar">Editar item
                     <i class="fa-solid fa-check"></i>
                 </button>
             </div>

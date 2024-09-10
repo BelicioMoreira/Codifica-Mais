@@ -65,4 +65,4 @@ $_SESSION['unidades_medidas'] = [
 
 
 // Redireciona para a página de listagem
-header('Location: listagem.php');
+header('Location: /produtos');

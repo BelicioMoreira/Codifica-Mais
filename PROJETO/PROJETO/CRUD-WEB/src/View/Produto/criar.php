@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Cadastro de produtos</title>
 </head>
 <body>
@@ -24,7 +24,7 @@
 
         <div class="conteudo formulario">
 
-        <form action="/produtos/criar" method="POST">
+        <form action="/produtos/salvar" method="POST">
             <div class="nome__formulario">
                 <div class="caixa__nome">
                     <label class ="nome__formulario__texto">

@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="/assets/css/styles.css">
     <title>Listagem de produtos</title>
 </head>
 <body>    
@@ -85,10 +85,10 @@
 
                         <div class="secao__itens__botoes">
                             <div class="box__botoes">
-                                <a href="/produtos/editar?id=1" class="botao__editar">Editar
+                                <a href="/produtos/editar?id=<?= $id?>" class="botao__editar">Editar
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <button class="botao__deletar">Deletar
+                                <button class="botao__deletar">Deletar       
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                             </div>
