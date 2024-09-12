@@ -18,7 +18,7 @@
                 <i class="fa-solid fa-chevron-left"></i> Voltar
             </a>
             <div class="cabecalho__busca">
-                <h1>Novo Item</h1>
+                <h1>Editar Item</h1>
             </div>            
         </header>
 

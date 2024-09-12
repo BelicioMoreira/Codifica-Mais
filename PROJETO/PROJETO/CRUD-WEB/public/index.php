@@ -17,6 +17,13 @@ if ($caminho == '/produtos/editar') {
 if ($caminho == '/produtos') {
     return $controlador->listar();
 }
+if ($caminho == '/produtos/salvar') {
+    return $controlador->salvar();
+}
+if ($caminho == '/produtos/deletar') {
+    return $produto->deletar();
+}
+
 
 echo "Página não encontrada :(";
 
