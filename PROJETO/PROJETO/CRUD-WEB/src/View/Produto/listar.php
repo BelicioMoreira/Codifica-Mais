@@ -88,7 +88,9 @@
                                 <a href="/produtos/editar?id=<?= $id?>" class="botao__editar">Editar
                                     <i class="fa-solid fa-pen-to-square"></i>
                                 </a>
-                                <button class="botao__deletar">Deletar       
+                                <button class="botao__deletar" 
+                                    href="/produtos/deletar?id=<?= $id ?>" 
+                                    onclick="return confirm('Deseja deletar o registro?')">Deletar   
                                     <i class="fa-solid fa-trash"></i>
                                 </button>
                             </div>

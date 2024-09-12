@@ -25,8 +25,7 @@ class Produtos
 
     public function salvar()
     {
-        $id = $_GET['id'] ?? 0;
-        
+        $id = $_GET['id'] ?? 0;        
         $dados = $_POST;
     
         if ($id == 0) {
@@ -41,7 +40,7 @@ class Produtos
         }
     
         $dados = [
-            'id' => $id,
+            'id' => ($_GET['id']),
             'nome' => ($_POST['nome']),
             'sku' => ($_POST['sku']),
             'unidade_medida_id' => ($_POST['unidade_medida_id']),
