@@ -40,7 +40,7 @@ class Produtos
         }
     
         $dados = [
-            'id' => ($_GET['id']),
+            'id' => $id,
             'nome' => ($_POST['nome']),
             'sku' => ($_POST['sku']),
             'unidade_medida_id' => ($_POST['unidade_medida_id']),

@@ -47,7 +47,7 @@
                 <div class="unidade__formulario">
                     <label>Unidade de Medida <span class="asterisco">*</span></label>
                     <div class="formulario__input">
-                        <input required type="text" id="unidade_medida_id" name="unidade_medida_id" value="<?= $produto['nome'] ?>">
+                        <input required type="text" id="unidade_medida_id" name="unidade_medida_id" value="<?= $produto['unidade_medida_id'] ?>">
                     </div>
                 </div>
             </div> 
