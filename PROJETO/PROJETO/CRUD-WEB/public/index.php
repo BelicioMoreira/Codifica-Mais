@@ -21,32 +21,34 @@ if ($caminho == '/produtos/salvar') {
     return $controlador->salvar();
 }
 if ($caminho == '/produtos/deletar') {
-    return $produto->deletar();
+    return $controlador->deletar();
 }
 
 
 echo "Página não encontrada :(";
 
-$_SESSION['produtos'] = [
-    [
-        'id' => 1,
-        'nome' => 'Smartphone',
-        'sku' => '123456',
-        'unidade_medida_id' => '1',
-        'valor' => 1500.00,
-        'quantidade' => 10,
-        'categoria_id' => '1',
-    ],
-    [
-        'id' => 2,
-        'nome' => 'Geladeira',
-        'sku' => '123457',
-        'unidade_medida_id' => '2',
-        'valor' => 2500.00,
-        'quantidade' => 5,
-        'categoria_id' => '2',
-    ],
-];
+if (empty($_SESSION['produtos'])) {
+    $_SESSION['produtos'] = [
+        1 => [
+            'id' => 1,
+            'nome' => "Camisa codifica +",
+            'sku' => '123',
+            'unidade_medida_id' => '1',
+            'valor' => 50.00,
+            'quantidade' => 100,
+            'categoria_id' => '1',
+        ],
+        2 => [
+            'id' => 2,
+            'nome' => "Notebook",
+            'sku' => '456',
+            'unidade_medida_id' => '2',
+            'valor' => 3000.00,
+            'quantidade' => 20,
+            'categoria_id' => '2',
+        ]
+    ];
+}
 
 // Define o array de categorias, unidades de medida e produtos
 $_SESSION['categorias'] = [
