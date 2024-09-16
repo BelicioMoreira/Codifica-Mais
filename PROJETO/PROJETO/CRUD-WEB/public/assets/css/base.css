@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-fundo: #3b3b3b;
+    --cor-botao-editar: #028506;
+    --cor-botao-deletar: #b80101;
+    --cor-texto-input: #333333;
+    --cor-input: #ffffff;
+    --cor-botao-editar-hover: #005e2a;
+    --cor-botao-deletar-hover: #440700;
+    --cor-fundo-item: #ccc;;
+    --cor-cabecalho: #e6e6e6;
+    --cor-borda: #cccccc;
+    --cor-eletronicos: #ff9800;
+    --cor-eletrodomesticos: #3f51b5;
+    --cor-moveis: #8bc34a;
+    --cor-decoracao: #9c27b0;
+    --cor-vestuario: #e91e63;
+    --cor-outros: #607d8b;
+    --fonte-principal: 'Archivo';
+}

@@ -1,0 +1,146 @@
+@import url(base.css);
+@import url(componentes.css);
+@import url(estrutura.css);
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.secao__itens {
+    background-color: var(--cor-cabecalho);
+    border-radius: 1rem;
+    margin: 1rem;
+    padding: 0.5rem;
+    box-shadow: 0px 4px 12px var(--cor-borda);
+    animation: appear 0.4s;
+    animation-timeline: scroll(scroller axis);
+}
+
+.secao__itens__item {
+    padding: 1rem;
+}
+
+.secao__itens__dados {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-family: var(--fonte-principal);
+    font-weight: 600;
+}
+
+.id__categoria__sku {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    padding: 0.3rem;
+}
+
+.id {
+    padding: 0.3rem;
+    color: var(--cor-texto-input);
+}
+
+.categoria {
+    padding: 0.3rem 0.7rem;
+    border-radius: 0.5rem;
+    color: var(--cor-input);
+}
+
+.categoria__eletronicos {
+    background-color: var(--cor-eletronicos);
+}
+
+.categoria__eletrodomesticos {
+    background-color: var(--cor-eletrodomesticos);
+}
+
+.categoria__moveis {
+    background-color: var(--cor-moveis);
+}
+
+.categoria__decoracao {
+    background-color: var(--cor-decoracao);
+}
+
+.categoria__vestuario {
+    background-color: var(--cor-vestuario);
+}
+
+.categoria__outros {
+    background-color: var(--cor-outros);
+}
+
+.sku {
+    padding: 0.3rem;
+    flex-grow: 4;
+    text-align: end;
+    color: var(--cor-texto-input);
+}
+
+.nome__quantidade {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-grow: 1;
+    padding: 0.3rem;
+}
+
+.nome {
+    color: var(--cor-texto-input);
+}
+
+.quantidade {
+    color: var(--cor-botao-editar);
+    font-weight: bold;
+}
+
+.box__botoes {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border-top: 1rem;
+}
+
+.asterisco {
+    color: red;
+}
+
+select {
+    background-color: var(--cor-input);
+    border: 0;
+    outline: none;
+    color: var(--cor-fundo);
+    border-radius: 0.3rem;
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+label {
+    padding: 0.5rem;
+    color: var(--cor-texto-input);
+    font-family: var(--fonte-principal);
+}
+
+h1 {
+    color: var(--cor-texto-input);
+    font-family: var(--fonte-principal);
+    font-weight: 900;
+}
+
+i {
+    margin: 0.3rem;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
