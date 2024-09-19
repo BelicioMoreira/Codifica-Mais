@@ -1,0 +1,144 @@
+@keyframes appear {
+    from{
+        opacity: 0;
+        scale: 0;
+        height: 100%;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.listagem::-webkit-scrollbar {
+    background: transparent;
+}
+
+.listagem::-webkit-scrollbar-thumb {
+    background: var(--cor-borda);
+    border-radius: 1rem;
+}
+
+button {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+::placeholder {
+    color: var(--cor-texto-input);
+}
+
+.cabecalho__botao {
+    background-color: var(--cor-botao-editar);
+    color: var(--cor-input);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+    font-weight: 400;
+    min-width: 7rem;
+}
+
+.cabecalho__busca {
+    border-radius: 1rem;
+    width: 27rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.barra__busca {
+    width: 100%;
+    background-color: var(--cor-input);
+    display: flex;
+    align-items: center;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    backdrop-filter: blur(2rem) saturate(200%);
+}
+
+.barra__busca input {
+    background: transparent;
+    flex: 1;
+    border: 0;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    color: var(--cor-texto-input);
+}
+
+.barra__busca button {
+    border: 0;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+    color: var(--cor-input);
+}
+
+.barra__busca button img{
+    width: 1.5rem;
+    color: var(--cor-input);
+}
+
+.botao__editar, .botao__deletar{
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    border-radius: 8px;
+    box-shadow: var(--cor-fundo), 0 4px 9px;
+    backface-visibility: hidden;
+    font-family: var(--fonte-principal);
+}
+
+.botao__editar, .botao__deletar {
+    color: var(--cor-input);
+}
+
+.botao__editar {
+    background-color: var(--cor-botao-editar);
+}
+
+.botao__deletar {
+    background-color: var(--cor-botao-deletar);
+}
+
+.botao__editar:hover, .botao__criar:hover, .botao__atualizar:hover, .cabecalho__botao:hover, .cabecalho__botao.voltar:hover{
+    background-color: var(--cor-botao-editar-hover);
+}
+
+.botao__deletar:hover {
+    background-color: var(--cor-botao-deletar-hover);
+}
+
+.botao__editar:active, .botao__atualizar:active, .botao__criar:active, .cabecalho__botao:active, .cabecalho__botao.cabecalho__botao.voltar:active {
+    background-color: var(--cor-botao-editar)
+}
+
+.botao__deletar:active {
+    background-color: var(--cor-botao-deletar);
+}
+
+.botao__criar, .botao__atualizar {
+    background-color: var(--cor-botao-editar);
+    color: var(--cor-input);
+    border-radius: 0.5rem;
+    font-size: 1.5rem;
+    padding: 1rem;
+    cursor: pointer;
+    font-family: var(--fonte-principal);
+    max-height: 4rem;
+    margin-top: auto;
+}
+
+/* .fa-rotate:active {
+    -moz-transform:rotate(360deg);
+    -webkit-transform:rotate(360deg);
+    transform:rotate(360deg);
+    -moz-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
+    transition: all .5s linear;
+} */
