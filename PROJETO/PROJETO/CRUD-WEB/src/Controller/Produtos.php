@@ -2,8 +2,18 @@
 
 namespace App\Controller;
 
+use PDO;
+use App\ConexaoDB;
+
 class Produtos
 {
+    private $pdo;
+
+    public function __construct()
+    {
+        $this->pdo = ConexaoDB::createConnection();
+    }
+
     public function listar()
     {
         $produtos = $_SESSION['produtos'];
