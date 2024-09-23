@@ -11,7 +11,7 @@ class Produtos
 
     public function __construct()
     {
-        $this->pdo = ConexaoDB::createConnection();
+        $this->pdo = ConexaoBD::createConnection();
     }
 
     public function listar()

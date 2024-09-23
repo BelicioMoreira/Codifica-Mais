@@ -5,7 +5,7 @@
     use PDO;
     use PDOException;
 
-class ConexaoDB 
+class ConexaoBD 
 {
     public static function createConnection(): PDO 
     {   

@@ -1,7 +1,3 @@
-<?php
-
-?>
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -30,12 +26,12 @@
 
         <div class="conteudo listagem">
 
-        <?php if (empty($_SESSION['produtos'])) {?>
+        <?php if (empty($produtos)) {?>
         <div>
             <p>Nenhum Produto Encontrado</p>
         </div>            
             <?php } else { ?>
-                <?php foreach ($_SESSION['produtos'] as $produto): ?>
+                <?php foreach ($produtos as $produto): ?>
                     <?php
                             switch ($produto['categoria_id']) {
                                 case 1:
