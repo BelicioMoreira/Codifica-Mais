@@ -1,6 +1,6 @@
 <?php
 
-    namespace App;
+    namespace App\Controller;
 
     use PDO;
     use PDOException;
@@ -13,7 +13,7 @@ class ConexaoDB
             $connection = new PDO(
                 "mysql:host=localhost;dbname=estoque",
                 'root',
-                ''
+                '123456'
             );
             $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
             $connection->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);

@@ -3,8 +3,8 @@
 namespace App\Controller;
 
 use PDO;
-use App\ConexaoDB;
-
+use App\Controller\ConexaoDB;
+    
 class Produtos
 {
     private $pdo;
@@ -16,7 +16,8 @@ class Produtos
 
     public function listar()
     {
-        $produtos = $_SESSION['produtos'];
+        $sql = "SELECT * FROM produto";
+        $res = $this->pdo->query($sql);
         require __DIR__ . "/../View/Produto/listar.php";
     }
 
