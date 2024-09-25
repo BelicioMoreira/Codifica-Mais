@@ -24,7 +24,7 @@ class Produtos
         require __DIR__ . "/../View/Produto/listar.php";
     }
 
-    public function editar($id, $nome, $sku, $unidade_medida_id, $valor, $quantidade, $categoria_id)
+    public function editar()
     {
         $sql = "UPDATE produto SET 
         nome = :nome, 
@@ -38,13 +38,13 @@ class Produtos
         $stmt = $this->pdo->prepare($sql);
 
         $stmt->execute([
-            'nome'=>$nome, 
-            'sku'=>$sku, 
-            'unidade_medida_id'=>$unidade_medida_id, 
-            'valor'=>$valor, 
-            'quantidade'=>$quantidade, 
-            'categoria_id'=>$categoria_id, 
-            'id'=>$id
+            'nome'=>$_POST['nome'], 
+            'sku'=>$_POST['sku'], 
+            'unidade_medida_id'=>$_POST['unidade_medida_id'], 
+            'valor'=>$_POST['valor'], 
+            'quantidade'=>$_POST['quantidade'], 
+            'categoria_id'=>$_POST['categoria_id'], 
+            'id'=>$_GET['id']
         ]);
         
         return true;
@@ -60,43 +60,26 @@ class Produtos
     {
         $sql = "INSERT INTO produtos (sku, nome, categoria_id, quantidade, valor, unidade_medida_id) VALUES (:sku, :nome, :categoria_id, :quantidade, :valor, :unidade_medida_id)";
 
-        // Quando você usa prepare(), você separa a lógica SQL dos dados. Isso garante que os dados sejam tratados de forma segura
-        $stmt = $this->connection->prepare($sql);
+        $stmt = $this->pdo->prepare($sql);
 
-        // Ao usar filter_input(), você reduz o risco de injeção de SQL e garante que os dados são válidos antes de tentar processá-los.
-        // FILTER_SANITIZE_STRING - remove caracteres especiais de uma string, como <, >, ", ', etc., que poderiam ser utilizados para injeção de código malicioso
-
-        $sku = filter_input(INPUT_POST, 'sku', FILTER_SANITIZE_STRING);
-        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
-        $categoria_id = filter_input(INPUT_POST, 'categoria_id', FILTER_VALIDATE_INT);
-        // Garantir que os dados são válidos antes de tentar executar
-        if (!$sku || !$nome || !$categoria_id || !$quantidade || !$valor || !$unidade_medida_id) {
-            throw new InvalidArgumentException("Dados inválidos fornecidos.");
-        }
-
-        try {
-            $stmt->execute([
-                ':sku' => $sku,
-                ':nome' => $nome,
-                ':categoria_id' => $categoria_id,
-                ':quantidade' => $quantidade,
-                ':valor' => $valor,
-                ':unidade_medida_id' => $unidade_medida_id,
-            ]);
-        } catch (PDOException $e) {
-            error_log("Erro de banco de dados: " . $e->getMessage());
-            echo "Erro ao atualizar o produto.";
-        }
+        $stmt->execute([
+            ':sku' => $_POST['sku'],
+            ':nome' => $_POST['sku'],
+            ':categoria_id' => $_POST['categoria_id'],
+            ':quantidade' => $_POST['quantidade'],
+            ':valor' => $_POST['valor'],
+            ':unidade_medida_id' => $_POST['unidade_medida_id'],
+        ]);
 
         header('Location: /produtos');
     }
     
 
-    public function deletar($id)
+    public function deletar()
     {
         $sql = "DELETE FROM produto WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute(['id'=>$id]);
+        $stmt->execute(['id'=>$_GET['id']]);
         return true;
     }
 }
