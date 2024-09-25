@@ -24,11 +24,30 @@ class Produtos
         require __DIR__ . "/../View/Produto/listar.php";
     }
 
-    public function editar()
+    public function editar($id, $nome, $sku, $unidade_medida_id, $valor, $quantidade, $categoria_id)
     {
-        $id = $_GET['id'];
-        $produtos = $_SESSION['produtos'];
-        $produto = $produtos[$id];
+        $sql = "UPDATE produto SET 
+        nome = :nome, 
+        sku = :sku, 
+        unidade_medida_id = :unidade_medida_id, 
+        valor = :valor, 
+        quantidade = :quantidade, 
+        categoria_id = :categoria_id 
+        WHERE id = :id";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->execute([
+            'nome'=>$nome, 
+            'sku'=>$sku, 
+            'unidade_medida_id'=>$unidade_medida_id, 
+            'valor'=>$valor, 
+            'quantidade'=>$quantidade, 
+            'categoria_id'=>$categoria_id, 
+            'id'=>$id
+        ]);
+        
+        return true;
         require __DIR__ . "/../View/Produto/editar.php";
     }
 
@@ -73,11 +92,12 @@ class Produtos
     }
     
 
-    public function deletar()
+    public function deletar($id)
     {
-        $id = $_GET['id'];
-        unset($_SESSION['produtos'][$id]);
-        header("Location: /produtos");
+        $sql = "DELETE FROM produto WHERE id = :id";
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute(['id'=>$id]);
+        return true;
     }
 }
 
