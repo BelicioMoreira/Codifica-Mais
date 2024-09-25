@@ -4,7 +4,8 @@ namespace App\Controller;
 
 use PDO;
 use App\Controller\ConexaoDB;
-    
+use mysqli;
+
 class Produtos
 {
     private $pdo;
@@ -17,7 +18,9 @@ class Produtos
     public function listar()
     {
         $sql = "SELECT * FROM produto";
-        $res = $this->pdo->query($sql);
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        $produtos = $stmt->fetchAll();
         require __DIR__ . "/../View/Produto/listar.php";
     }
 
@@ -36,33 +39,37 @@ class Produtos
 
     public function salvar()
     {
-        $id = $_GET['id'] ?? 0;        
-        $dados = $_POST;
-    
-        if ($id == 0) {
-            $maiorId = 0;
-            
-            foreach ($_SESSION['produtos'] as $produto) {
-                if ($maiorId < $produto['id']) {
-                    $maiorId = $produto['id'];
-                }
-            }
-            $id = $maiorId + 1;
+        $sql = "INSERT INTO produtos (sku, nome, categoria_id, quantidade, valor, unidade_medida_id) VALUES (:sku, :nome, :categoria_id, :quantidade, :valor, :unidade_medida_id)";
+
+        // Quando você usa prepare(), você separa a lógica SQL dos dados. Isso garante que os dados sejam tratados de forma segura
+        $stmt = $this->connection->prepare($sql);
+
+        // Ao usar filter_input(), você reduz o risco de injeção de SQL e garante que os dados são válidos antes de tentar processá-los.
+        // FILTER_SANITIZE_STRING - remove caracteres especiais de uma string, como <, >, ", ', etc., que poderiam ser utilizados para injeção de código malicioso
+
+        $sku = filter_input(INPUT_POST, 'sku', FILTER_SANITIZE_STRING);
+        $nome = filter_input(INPUT_POST, 'nome', FILTER_SANITIZE_STRING);
+        $categoria_id = filter_input(INPUT_POST, 'categoria_id', FILTER_VALIDATE_INT);
+        // Garantir que os dados são válidos antes de tentar executar
+        if (!$sku || !$nome || !$categoria_id || !$quantidade || !$valor || !$unidade_medida_id) {
+            throw new InvalidArgumentException("Dados inválidos fornecidos.");
         }
-    
-        $dados = [
-            'id' => $id,
-            'nome' => ($_POST['nome']),
-            'sku' => ($_POST['sku']),
-            'unidade_medida_id' => ($_POST['unidade_medida_id']),
-            'valor' => ($_POST['valor']),
-            'quantidade' => ($_POST['quantidade']),
-            'categoria_id' => ($_POST['categoria_id'])
-        ];
-    
-        $_SESSION['produtos'][$id] = $dados;
-    
-        header("Location: /produtos");
+
+        try {
+            $stmt->execute([
+                ':sku' => $sku,
+                ':nome' => $nome,
+                ':categoria_id' => $categoria_id,
+                ':quantidade' => $quantidade,
+                ':valor' => $valor,
+                ':unidade_medida_id' => $unidade_medida_id,
+            ]);
+        } catch (PDOException $e) {
+            error_log("Erro de banco de dados: " . $e->getMessage());
+            echo "Erro ao atualizar o produto.";
+        }
+
+        header('Location: /produtos');
     }
     
 
