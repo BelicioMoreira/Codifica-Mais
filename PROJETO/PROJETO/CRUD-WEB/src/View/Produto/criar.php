@@ -57,7 +57,7 @@
                     <label>Unidade de Medida <span class="asterisco">*</span></label>
                     <div class="formulario__input select">
                         <select required type="text" id="unidade_medida_id" name="unidade_medida_id">
-                            <option disabled selected>Unidade de medida</option>
+                            <option disabled selected>Selecione uma unidade de medida</option>
                             <option value="1">Un</option>
                             <option value="2">Kg</option>
                             <option value="3">g</option>

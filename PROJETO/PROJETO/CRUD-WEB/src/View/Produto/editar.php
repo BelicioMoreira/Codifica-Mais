@@ -53,11 +53,11 @@
             </div> 
 
             <div class="valor__quantidade__formulario">
-            <div class="unidade__formulario">
+                <div class="unidade__formulario">
                     <label>Unidade de Medida <span class="asterisco">*</span></label>
                     <div class="formulario__input select">
                         <select required type="text" id="unidade_medida_id" name="unidade_medida_id">
-                            <option disabled selected>value="<?= $produto['unidade_medida_id'] ?></option>
+                            <option disabled selected>Selecione uma unidade de medida</option>
                             <option value="1">Un</option>
                             <option value="2">Kg</option>
                             <option value="3">g</option>
@@ -67,6 +67,7 @@
                             <option value="7">m</option>
                             <option value="8">m²</option>
                         </select>
+                    </div>
                 </div>
                 
                 <div class ="quantidade__formulario">

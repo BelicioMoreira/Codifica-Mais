@@ -58,13 +58,13 @@ class Produtos
 
     public function salvar()
     {
-        $sql = "INSERT INTO produtos (sku, nome, categoria_id, quantidade, valor, unidade_medida_id) VALUES (:sku, :nome, :categoria_id, :quantidade, :valor, :unidade_medida_id)";
+        $sql = "INSERT INTO produto (sku, nome, categoria_id, quantidade, valor, unidade_medida_id) VALUES (:sku, :nome, :categoria_id, :quantidade, :valor, :unidade_medida_id)";
 
         $stmt = $this->pdo->prepare($sql);
 
         $stmt->execute([
             ':sku' => $_POST['sku'],
-            ':nome' => $_POST['sku'],
+            ':nome' => $_POST['nome'],
             ':categoria_id' => $_POST['categoria_id'],
             ':quantidade' => $_POST['quantidade'],
             ':valor' => $_POST['valor'],
