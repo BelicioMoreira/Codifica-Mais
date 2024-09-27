@@ -1,6 +1,7 @@
 <?php
 
 require __DIR__.'/../vendor/autoload.php';
+require '../src/helper.php';
 
 use App\Controller\Produtos;
 

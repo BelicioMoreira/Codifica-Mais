@@ -5,6 +5,7 @@ namespace App\Controller;
 use PDO;
 use App\Controller\ConexaoDB;
 use mysqli;
+use PDOException;
 
 class Produtos
 {
@@ -24,6 +25,23 @@ class Produtos
         require __DIR__ . "/../View/Produto/listar.php";
     }
 
+    public function getID()
+    {
+        $sql = "SELECT
+        nome.produto,
+        sku.produto,
+        unidade_medida_id.produto,
+        valor.produto,
+        quantidade.produto,
+        categoria_id.produto
+        WHERE id = :id";
+
+        $stmt = $this->pdo->prepare($sql);
+        $stmt->execute();
+        $getID = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $getID;
+    }
+
     public function editar()
     {
         $sql = "UPDATE produto SET 
@@ -35,17 +53,35 @@ class Produtos
         categoria_id = :categoria_id 
         WHERE id = :id";
 
-        $stmt = $this->pdo->prepare($sql);
 
-        $stmt->execute([
-            'nome'=>$_POST['nome'], 
-            'sku'=>$_POST['sku'], 
-            'unidade_medida_id'=>$_POST['unidade_medida_id'], 
-            'valor'=>$_POST['valor'], 
-            'quantidade'=>$_POST['quantidade'], 
-            'categoria_id'=>$_POST['categoria_id'], 
-            'id'=>$_GET['id']
-        ]);
+        //dd(getID);
+
+        try {
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute([
+                'nome'=>$_POST['nome'], 
+                'sku'=>$_POST['sku'], 
+                'unidade_medida_id'=>$_POST['unidade_medida_id'], 
+                'valor'=>$_POST['valor'], 
+                'quantidade'=>$_POST['quantidade'], 
+                'categoria_id'=>$_POST['categoria_id'], 
+                'id'=>$_GET['id']
+            ]);
+        } catch (PDOException $e) {
+            echo "Erro ao salvar: " . $e->getMessage();
+        }
+
+        // $stmt = $this->pdo->prepare($sql);
+
+        // $stmt->execute([
+        //     'nome'=>$_POST['nome'], 
+        //     'sku'=>$_POST['sku'], 
+        //     'unidade_medida_id'=>$_POST['unidade_medida_id'], 
+        //     'valor'=>$_POST['valor'], 
+        //     'quantidade'=>$_POST['quantidade'], 
+        //     'categoria_id'=>$_POST['categoria_id'], 
+        //     'id'=>$_GET['id']
+        // ]);
         
         return true;
         require __DIR__ . "/../View/Produto/editar.php";
@@ -80,7 +116,7 @@ class Produtos
         $sql = "DELETE FROM produto WHERE id = :id";
         $stmt = $this->pdo->prepare($sql);
         $stmt->execute(['id'=>$_GET['id']]);
-        return true;
+        header('Location: /produtos');
     }
 }
 
