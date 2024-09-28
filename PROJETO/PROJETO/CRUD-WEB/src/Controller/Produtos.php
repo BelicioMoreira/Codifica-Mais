@@ -28,6 +28,7 @@ class Produtos
     public function getID()
     {
         $sql = "SELECT
+        id,
         nome,
         sku,
         unidade_medida_id,
@@ -45,6 +46,8 @@ class Produtos
 
     public function editar()
     {
+        $produto = $this->getID();
+
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "UPDATE produto SET 
         nome = :nome, 
@@ -81,6 +84,36 @@ class Produtos
 
     public function salvar()
     {
+        //$id = $this->getID();
+        //dd($id['id']);
+
+        $produto = $this->getID();
+
+        if (isset ($produto['id']) && !empty($produto['id'])) {
+
+        $sql = "UPDATE produto SET 
+        nome = :nome, 
+        sku = :sku, 
+        unidade_medida_id = :unidade_medida_id, 
+        valor = :valor, 
+        quantidade = :quantidade, 
+        categoria_id = :categoria_id 
+        WHERE id = :id";
+
+        $stmt = $this->pdo->prepare($sql);
+
+        $stmt->execute([
+            ':sku' => $_POST['sku'],
+            ':nome' => $_POST['nome'],
+            ':categoria_id' => $_POST['categoria_id'],
+            ':quantidade' => $_POST['quantidade'],
+            ':valor' => $_POST['valor'],
+            ':unidade_medida_id' => $_POST['unidade_medida_id'],
+            'id'=>$_GET['id']
+        ]);
+
+        header('Location: /produtos');
+    } else {
         $sql = "INSERT INTO produto (sku, nome, categoria_id, quantidade, valor, unidade_medida_id) VALUES (:sku, :nome, :categoria_id, :quantidade, :valor, :unidade_medida_id)";
 
         $stmt = $this->pdo->prepare($sql);
@@ -95,6 +128,7 @@ class Produtos
         ]);
 
         header('Location: /produtos');
+    }
     }
     
 
