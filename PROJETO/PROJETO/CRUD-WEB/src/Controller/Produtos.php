@@ -28,22 +28,24 @@ class Produtos
     public function getID()
     {
         $sql = "SELECT
-        nome.produto,
-        sku.produto,
-        unidade_medida_id.produto,
-        valor.produto,
-        quantidade.produto,
-        categoria_id.produto
+        nome,
+        sku,
+        unidade_medida_id,
+        valor,
+        quantidade,
+        categoria_id
+        FROM produto
         WHERE id = :id";
 
         $stmt = $this->pdo->prepare($sql);
-        $stmt->execute();
-        $getID = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $stmt->execute(['id'=>$_GET['id']]);
+        $getID = $stmt->fetch(PDO::FETCH_ASSOC);
         return $getID;
     }
 
     public function editar()
     {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $sql = "UPDATE produto SET 
         nome = :nome, 
         sku = :sku, 
@@ -52,9 +54,6 @@ class Produtos
         quantidade = :quantidade, 
         categoria_id = :categoria_id 
         WHERE id = :id";
-
-
-        //dd(getID);
 
         try {
             $stmt = $this->pdo->prepare($sql);
@@ -71,19 +70,7 @@ class Produtos
             echo "Erro ao salvar: " . $e->getMessage();
         }
 
-        // $stmt = $this->pdo->prepare($sql);
-
-        // $stmt->execute([
-        //     'nome'=>$_POST['nome'], 
-        //     'sku'=>$_POST['sku'], 
-        //     'unidade_medida_id'=>$_POST['unidade_medida_id'], 
-        //     'valor'=>$_POST['valor'], 
-        //     'quantidade'=>$_POST['quantidade'], 
-        //     'categoria_id'=>$_POST['categoria_id'], 
-        //     'id'=>$_GET['id']
-        // ]);
-        
-        return true;
+        }
         require __DIR__ . "/../View/Produto/editar.php";
     }
 
