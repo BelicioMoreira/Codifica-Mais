@@ -22,7 +22,8 @@ CREATE TABLE produto (
     unidade_medida_id INT NOT NULL,
     valor DECIMAL(10,2) NOT NULL,
     quantidade INT NOT NULL,
-    categoria_id INT NOT NULL
+    categoria_id INT NOT NULL,
+    imagens VARCHAR(255) NOT NULL
 );
 
 CREATE INDEX idx_produto_categoria ON produto(categoria_id);

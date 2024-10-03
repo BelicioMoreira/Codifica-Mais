@@ -99,6 +99,9 @@
                 </button>
             </div>
 
+            <label for="imagem">Arquivo</label>
+            <input type="file" name="imagem" id="imagem" value="<?= $produto['imagens'] ?>">
+
             <div class="texto__inferior">
                 <p>Os campos marcados com asterisco (<span class="asterisco">*</span>) são de preenchimento obrigatório</p>
             </div>

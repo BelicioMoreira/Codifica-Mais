@@ -19,6 +19,6 @@ INSERT INTO unidade_medida (id, nome) VALUES
 (8, 'm²');
 
 -- Inserts para a tabela de Produtos
-INSERT INTO produto (id, nome, sku, unidade_medida_id, valor, quantidade, categoria_id) VALUES
-(1, 'Smartphone', '123456', 1, 1500.00, 10, 1),
-(2, 'Geladeira', '123457', 2, 2500.00, 5, 2);
+INSERT INTO produto (id, nome, sku, unidade_medida_id, valor, quantidade, categoria_id, imagens) VALUES
+(1, 'Smartphone', '123456', 1, 1500.00, 10, 1, 'testeimagen.png'),
+(2, 'Geladeira', '123457', 2, 2500.00, 5, 2, 'testeimagen.png');

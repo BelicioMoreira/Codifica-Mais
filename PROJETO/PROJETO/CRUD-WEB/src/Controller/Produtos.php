@@ -34,7 +34,8 @@ class Produtos
         unidade_medida_id,
         valor,
         quantidade,
-        categoria_id
+        categoria_id,
+        imagens
         FROM produto
         WHERE id = :id";
 
@@ -55,7 +56,8 @@ class Produtos
         unidade_medida_id = :unidade_medida_id, 
         valor = :valor, 
         quantidade = :quantidade, 
-        categoria_id = :categoria_id 
+        categoria_id = :categoria_id,
+        imagens = :imagens 
         WHERE id = :id";
 
         try {
@@ -66,7 +68,8 @@ class Produtos
                 'unidade_medida_id'=>$_POST['unidade_medida_id'], 
                 'valor'=>$_POST['valor'], 
                 'quantidade'=>$_POST['quantidade'], 
-                'categoria_id'=>$_POST['categoria_id'], 
+                'categoria_id'=>$_POST['categoria_id'],
+                'imagens' => $_FILES['imagens'], 
                 'id'=>$_GET['id']
             ]);
         } catch (PDOException $e) {
@@ -85,7 +88,11 @@ class Produtos
     public function salvar()
     {
         //$id = $this->getID();
-        //dd($id['id']);
+        $caminho = __DIR__ . "\uploads";
+
+        move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho);
+
+        dd($_FILES);
 
         $produto = $this->getID();
 
@@ -97,7 +104,8 @@ class Produtos
         unidade_medida_id = :unidade_medida_id, 
         valor = :valor, 
         quantidade = :quantidade, 
-        categoria_id = :categoria_id 
+        categoria_id = :categoria_id,
+        imagens = :imagens 
         WHERE id = :id";
 
         $stmt = $this->pdo->prepare($sql);
@@ -109,12 +117,13 @@ class Produtos
             ':quantidade' => $_POST['quantidade'],
             ':valor' => $_POST['valor'],
             ':unidade_medida_id' => $_POST['unidade_medida_id'],
+            'imagens' => $_FILES['imagens'],
             'id'=>$_GET['id']
         ]);
 
         header('Location: /produtos');
     } else {
-        $sql = "INSERT INTO produto (sku, nome, categoria_id, quantidade, valor, unidade_medida_id) VALUES (:sku, :nome, :categoria_id, :quantidade, :valor, :unidade_medida_id)";
+        $sql = "INSERT INTO produto (sku, nome, categoria_id, quantidade, valor, unidade_medida_id, imagens) VALUES (:sku, :nome, :categoria_id, :quantidade, :valor, :unidade_medida_id, :imagens)";
 
         $stmt = $this->pdo->prepare($sql);
 
@@ -125,6 +134,7 @@ class Produtos
             ':quantidade' => $_POST['quantidade'],
             ':valor' => $_POST['valor'],
             ':unidade_medida_id' => $_POST['unidade_medida_id'],
+            ':imagens' => $_FILES['imagens']
         ]);
 
         header('Location: /produtos');

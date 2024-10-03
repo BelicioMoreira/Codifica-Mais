@@ -24,7 +24,7 @@
 
         <div class="conteudo formulario">
 
-        <form action="/produtos/salvar" method="POST">
+        <form action="/produtos/salvar" method="POST" enctype="multipart/form-data">
             <div class="nome__formulario">
                 <div class="caixa__nome">
                     <label class ="nome__formulario__texto">
@@ -98,6 +98,9 @@
                     <i class="fa-solid fa-check"></i>
                 </button>
             </div>
+
+            <label for="imagem">Arquivo</label>
+            <input type="file" name="imagem" id="imagem">
 
             <div class="texto__inferior">
                 <p>Os campos marcados com asterisco (<span class="asterisco">*</span>) são de preenchimento obrigatório</p>
