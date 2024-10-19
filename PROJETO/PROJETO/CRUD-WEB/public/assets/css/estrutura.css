@@ -86,3 +86,16 @@ header {
 .select{
     width: 100%;
 }
+
+.img-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 15rem;
+}
+
+.img {
+    background-color: rgb(233, 30, 30);
+    min-height: 8rem;
+    min-width: 8rem;    
+}

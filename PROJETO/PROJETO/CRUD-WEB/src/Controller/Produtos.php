@@ -92,7 +92,7 @@ class Produtos
 
         move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho);
 
-        dd($_FILES);
+        //dd($_FILES);
 
         $produto = $this->getID();
 

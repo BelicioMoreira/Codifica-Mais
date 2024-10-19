@@ -78,6 +78,11 @@
                                 <p class="quantidade"><?= $produto['quantidade'];?></p>
                             </div>
                         </div>
+                                <div class="img-box">
+                                    <div class="img">
+                                        img
+                                    </div>
+                                </div> 
 
                         <div class="secao__itens__botoes">
                             <div class="box__botoes">
